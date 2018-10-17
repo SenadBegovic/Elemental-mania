@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98d596710565418f87f874b2dd9c436, type: 3}
+  m_Name: WindWall
+  m_EditorClassIdentifier: 
+  m_MaxHealth: 100
+  m_StartingHealth: 100
+  m_Visualizer: {fileID: 1888713301590692, guid: 95598676bb0964e3fa4b7eff778a8a81,
+    type: 2}
+  m_Resistance:
+    Fire: 0
+    Frost: 0
+    Wind: 0
+    Earth: 0
