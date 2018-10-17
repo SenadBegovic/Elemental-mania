@@ -4,13 +4,15 @@ using UnityEngine;
 using UnityEngine.Assertions;
 
 public class Weapon : MonoBehaviour {
+    
+    public int kDamage;
+    public ElementalType kType;
+    public int kCooldown;
 
-    public int Damage;
-    public ElementalType type;
-    public int Cooldown;
-
+    [SerializeField]
+    private InputMapping kInputMapping;
     private ParticleSystem m_Emitter;
-    private float update;
+    private float CoolingPeriod;
 
     // Use this for initialization
     void Start () {
@@ -20,12 +22,12 @@ public class Weapon : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetButtonDown("PrimaryFire"))
+        if (Input.GetButtonDown("PlayerOne_PrimaryFire"))
         {
-            update += Time.deltaTime;
-            if (update > Cooldown)
+            CoolingPeriod += Time.deltaTime;
+            if (CoolingPeriod > kCooldown)
             {
-                update = 0.0f;
+                CoolingPeriod = 0.0f;
                 m_Emitter.Play();
             }
         }

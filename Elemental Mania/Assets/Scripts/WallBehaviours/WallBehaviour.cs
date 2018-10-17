@@ -35,6 +35,6 @@ public abstract class WallBehaviour : ScriptableObject
 
     public virtual void ParticleCollision(Wall _this, Weapon weapon, List<ParticleCollisionEvent> events)
     {
-        _this.Health -= m_Resistance.GetResistance(weapon.type) * weapon.Damage * events.Count;
+        _this.Health -= m_Resistance.GetResistance(weapon.kType) * weapon.kDamage * events.Count;
     }
 }

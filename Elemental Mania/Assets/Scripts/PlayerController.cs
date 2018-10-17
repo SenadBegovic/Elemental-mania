@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     private LayerMask kGroundLayer;
 
+    [SerializeField]
+    private InputMapping kInputMapping;
+
     void Start ()
     {
         kRb = GetComponent<Rigidbody2D>();
@@ -39,5 +42,5 @@ public class PlayerController : MonoBehaviour {
 
         kMoveInput = Input.GetAxis("Horizontal");
         kRb.velocity = new Vector2(kMoveInput * kSpeed, kRb.velocity.y);
-    }
+   }
 }
