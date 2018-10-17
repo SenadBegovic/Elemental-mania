@@ -11,7 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f15588034f5e44e59963d3d17fc82bf, type: 3}
   m_Name: PlayerTwo
   m_EditorClassIdentifier: 
-  kHorizontalMovement: 
-  kVerticalMovement: 
+  kHorizontalMovement: PlayerTwo_HorizontalMovement
+  kVerticalMovement: PlayerTwo_VerticalMovement
   kPrimaryFire: PlayerTwo_PrimaryFire
   kSecondaryFire: PlayerTwo_SecondaryFire
+  kNextWeapon: PlayerTwo_NextWeapon
