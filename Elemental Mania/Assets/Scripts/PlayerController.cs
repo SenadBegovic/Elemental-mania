@@ -1,38 +1,37 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PlayerController : PhysicsObject
-{
-    public float maxSpeed = 7;
-    public float jumpTakeOffSpeed = 7;
-    public int count;
-    bool characterInQuicksand = false;
+public class PlayerController : MonoBehaviour {
 
-    // Use this for initialization
-    private void Start()
+    public float speed;
+    public float jumpForce;
+    public float moveInput;
+
+    private Rigidbody2D rb;
+    private Vector2 moveVelocity;
+
+    private bool isGrounded;
+    public Transform groundCheck;
+    public float checkRadius;
+    public LayerMask whatIsGround;
+
+    void Start ()
     {
-    }
+        rb = GetComponent<Rigidbody2D>();
+	}
 
-    protected override void ComputeVelocity()
+	void Update ()
     {
-        Vector2 move = Vector2.zero;
-
-        move.x = Input.GetAxis("Horizontal");
-
-        if (Input.GetButtonDown("Jump") && grounded)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
         {
-            velocity.y = jumpTakeOffSpeed;
+            rb.velocity = Vector2.up * jumpForce;
         }
-        else if (Input.GetButtonUp("Jump"))
-        {
-            if (velocity.y > 0)
-            {
-                velocity.y = velocity.y * 0.5f;
-            }
-        }
+	}
 
-        targetVelocity = move * maxSpeed;
+    private void FixedUpdate()
+    {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+
+        moveInput = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
     }
-
 }
