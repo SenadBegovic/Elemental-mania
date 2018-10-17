@@ -2,42 +2,42 @@
 
 public class PlayerController : MonoBehaviour {
     [SerializeField]
-    private float speed;
+    private float kSpeed;
     [SerializeField]
-    private float jumpForce;
+    private float kJumpForce;
     [SerializeField]
-    private float moveInput;
+    private float kMoveInput;
 
-    private Rigidbody2D rb;
+    private Rigidbody2D kRb;
     [SerializeField]
-    private Vector2 moveVelocity;
+    private Vector2 kMoveVelocity;
 
-    private bool isGrounded;
+    private bool kIsGrounded;
     [SerializeField]
-    private Transform groundCheck;
+    private Transform kGroundCheck;
     [SerializeField]
-    private float checkRadius;
+    private float kCheckRadius;
     [SerializeField]
-    private LayerMask whatIsGround;
+    private LayerMask kGroundLayer;
 
     void Start ()
     {
-        rb = GetComponent<Rigidbody2D>();
+        kRb = GetComponent<Rigidbody2D>();
 	}
 
 	void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && kIsGrounded)
         {
-            rb.velocity = Vector2.up * jumpForce;
+            kRb.velocity = Vector2.up * kJumpForce;
         }
 	}
 
     private void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        kIsGrounded = Physics2D.OverlapCircle(kGroundCheck.position, kCheckRadius, kGroundLayer);
 
-        moveInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        kMoveInput = Input.GetAxis("Horizontal");
+        kRb.velocity = new Vector2(kMoveInput * kSpeed, kRb.velocity.y);
     }
 }
