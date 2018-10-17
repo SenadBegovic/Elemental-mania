@@ -14,11 +14,18 @@ public class Weapon : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Assert.IsTrue(m_Emitter.collision.enabled, "Must have an emitter with collisions enabled");
+        m_Emitter = GetComponent<ParticleSystem>();
+        Assert.IsTrue(m_Emitter.collision.enabled, "Must have an emitter with collisions enabled");        
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (Input.GetButtonDown("PrimaryFire"))
+        {
+            if(Time.deltaTime > 1.0f)
+            {
+                m_Emitter.Play();
+            }
+        }
 	}
 }
