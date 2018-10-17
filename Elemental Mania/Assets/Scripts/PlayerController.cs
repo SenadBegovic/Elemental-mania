@@ -1,18 +1,24 @@
 ﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-
-    public float speed;
-    public float jumpForce;
-    public float moveInput;
+    [SerializeField]
+    private float speed;
+    [SerializeField]
+    private float jumpForce;
+    [SerializeField]
+    private float moveInput;
 
     private Rigidbody2D rb;
+    [SerializeField]
     private Vector2 moveVelocity;
 
     private bool isGrounded;
-    public Transform groundCheck;
-    public float checkRadius;
-    public LayerMask whatIsGround;
+    [SerializeField]
+    private Transform groundCheck;
+    [SerializeField]
+    private float checkRadius;
+    [SerializeField]
+    private LayerMask whatIsGround;
 
     void Start ()
     {
