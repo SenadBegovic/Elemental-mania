@@ -2,20 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = kTypeName, menuName = WallBehaviour.kWallFolder + kTypeName)]
 public class EarthWallBehaviour : WallBehaviour
 {
-    public override void Destroy(Wall _this)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override void Instantiate(Wall _this)
-    {
-        throw new System.NotImplementedException();
-    }
+    public const string kTypeName = "Earth Wall";
 
     public override void Tick(Wall _this)
     {
-        throw new System.NotImplementedException();
+
     }
 }
