@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour {
+public class EffectiveHealth : MonoBehaviour {
+
+    [SerializeField]
+    private int m_Health; 
 
     [SerializeField]
     private int m_Health; 
