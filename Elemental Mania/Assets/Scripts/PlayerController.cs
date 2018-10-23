@@ -30,9 +30,11 @@ public class PlayerController : MonoBehaviour {
 
 	void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow) && kIsGrounded)
+        if (Input.GetButtonDown("PlayerOne_VerticalMovement") && kIsGrounded)
         {
+            
             kRb.velocity = Vector2.up * kJumpForce;
+
         }
 	}
 
