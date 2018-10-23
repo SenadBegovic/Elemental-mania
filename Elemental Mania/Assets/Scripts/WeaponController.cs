@@ -32,8 +32,7 @@ public class WeaponController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        float axis = Input.GetAxis(kInputMapping.kNextWeapon);
-        if(axis > 0)
+        if(Input.GetButtonDown(kInputMapping.kNextWeapon))
         {
             int nextIndex = (m_CurrentWeaponIndex + 1) % kWeapons.Length;
             SwitchTo(nextIndex);
