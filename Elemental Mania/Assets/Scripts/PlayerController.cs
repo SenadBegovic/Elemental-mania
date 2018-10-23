@@ -47,12 +47,12 @@ public class PlayerController : MonoBehaviour {
 
         if(kFacingRight == false && kMoveInput > 0)
         {
-            transform.Rotate(Vector3.up, 180);
+            flip();
         } else if(kFacingRight == true && kMoveInput < 0)
         {
-            transform.Rotate(Vector3.up, 180);
+            flip();
         }
-    }
+   }
 
     private void flip()
     {
