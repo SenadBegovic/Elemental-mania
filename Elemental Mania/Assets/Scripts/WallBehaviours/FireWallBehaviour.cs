@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Health))]
+[RequireComponent(typeof(EffectiveHealth))]
 public class Deterioation : MonoBehaviour
 {
     [SerializeField]
     [Tooltip("Damage pr second that this wall deals to itself")]
     private int kDeterioationRate = 2;
     private float m_TimeSinceLastDeterioation = 0;
-    private Health m_Health;  
+    private EffectiveHealth m_Health;  
 
 
     public void Update()
@@ -17,7 +17,6 @@ public class Deterioation : MonoBehaviour
         m_TimeSinceLastDeterioation += Time.deltaTime;
         if (m_TimeSinceLastDeterioation <= 0.5)
         {
-            m_Health -= kDeterioationRate;
         }
     }
 }
