@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:Elemental Mania/Assets/Scripts/WallBehaviours/Deterioation.cs
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Health))]
+=======
+using UnityEngine;
+
+[RequireComponent(typeof(EffectiveHealth))]
+>>>>>>> dac930b22f9cbf98a40cb055f1c5b85c226dac90
 public class Deterioation : MonoBehaviour
 {
     [SerializeField]
