@@ -7,6 +7,12 @@ public class EffectiveHealth : MonoBehaviour {
     [SerializeField]
     private int m_Health; 
 
+    public int CurrentHealth{
+        get{
+            return m_Health;
+        }
+    }
+
     public void TakeDamage(int amount)
     {
         m_Health -= amount;
@@ -14,7 +20,7 @@ public class EffectiveHealth : MonoBehaviour {
 
     public void TakeDamage(int amount, ElementalType type)
     {
-       // m_Health = m_Health - (amount*
+        TakeDamage(amount);
     }
 
 	void Start () {
