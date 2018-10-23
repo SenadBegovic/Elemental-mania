@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class Health : MonoBehaviour {
 
+    [SerializeField]
+    private int m_Health; 
+
     public void TakeDamage(int amount)
     {
-
+        m_Health -= amount;
     }
 
     public void TakeDamage(int amount, ElementalType type)
     {
-
+       // m_Health = m_Health - (amount*
     }
 
-	// Use this for initialization
 	void Start () {
 		
 	}
 	
-    
-
-	// Update is called once per frame
 	void Update () {
 		
 	}
