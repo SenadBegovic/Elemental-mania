@@ -2,10 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireWallBehaviour : WallBehaviour
+[RequireComponent(typeof(Health))]
+public class Deterioation : MonoBehaviour
 {
-    public override void Tick(Wall _this)
+    [SerializeField]
+    [Tooltip("Damage pr second that this wall deals to itself")]
+    private int kDeterioationRate = 2;
+    private float m_TimeSinceLastDeterioation = 0;
+    private Health m_Health;  
+
+
+    public void Update()
     {
-        throw new System.NotImplementedException();
+        m_TimeSinceLastDeterioation += Time.deltaTime;
+        if (m_TimeSinceLastDeterioation <= 0.5)
+        {
+            m_Health -= kDeterioationRate;
+        }
     }
 }

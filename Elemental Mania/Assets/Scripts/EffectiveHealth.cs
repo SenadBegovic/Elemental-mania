@@ -4,11 +4,23 @@ using UnityEngine;
 
 public class Health : MonoBehaviour {
 
+    public void TakeDamage(int amount)
+    {
+
+    }
+
+    public void TakeDamage(int amount, ElementalType type)
+    {
+
+    }
+
 	// Use this for initialization
 	void Start () {
 		
 	}
 	
+    
+
 	// Update is called once per frame
 	void Update () {
 		
