@@ -3,7 +3,9 @@ guid: bb53b716c6bd54d4a9769dddcbafeed8
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - kGroundCheck: {instanceID: 0}
+  - kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

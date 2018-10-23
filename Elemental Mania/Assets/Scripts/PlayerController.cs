@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour {
     private float kJumpForce;
     [SerializeField]
     private float kMoveInput;
+    [SerializeField]
+    private bool kFacingRight = true;
 
     private Rigidbody2D kRb;
     [SerializeField]
@@ -30,7 +32,7 @@ public class PlayerController : MonoBehaviour {
 
 	void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow) && kIsGrounded)
+        if (Input.GetButtonDown("PlayerOne_VerticalMovement") && kIsGrounded)
         {
             kRb.velocity = Vector2.up * kJumpForce;
         }
@@ -42,5 +44,21 @@ public class PlayerController : MonoBehaviour {
 
         kMoveInput = Input.GetAxis(kInputMapping.kHorizontalMovement);
         kRb.velocity = new Vector2(kMoveInput * kSpeed, kRb.velocity.y);
-   }
+
+        if(kFacingRight == false && kMoveInput > 0)
+        {
+            transform.Rotate(Vector3.up, 180);
+        } else if(kFacingRight == true && kMoveInput < 0)
+        {
+            transform.Rotate(Vector3.up, 180);
+        }
+    }
+
+    private void flip()
+    {
+        kFacingRight = !kFacingRight;
+        Vector3 Scaler = transform.localScale;
+        Scaler.x *= -1;
+        transform.localScale = Scaler;
+    }
 }
