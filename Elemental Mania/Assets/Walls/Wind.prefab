@@ -21,6 +21,9 @@ GameObject:
   - component: {fileID: 4887153813869142}
   - component: {fileID: 198338988007570608}
   - component: {fileID: 199692165039394998}
+  - component: {fileID: 114221137447128088}
+  - component: {fileID: 114311086361568792}
+  - component: {fileID: 114949279770038804}
   m_Layer: 0
   m_Name: Wind
   m_TagString: Untagged
@@ -41,6 +44,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114221137447128088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1888713301590692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d470cfbbd6a44055b23113161c6689e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Health: 0
+--- !u!114 &114311086361568792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1888713301590692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 580312153246e48539c6b77364ba8fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114949279770038804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1888713301590692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810a1e1d718804f7997868df9d6fbf7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198338988007570608
 ParticleSystem:
   m_ObjectHideFlags: 1

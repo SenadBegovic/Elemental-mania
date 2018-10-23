@@ -11,6 +11,10 @@ public class EffectiveHealth : MonoBehaviour {
         get{
             return m_Health;
         }
+
+        set{
+            m_Health = value;
+        }
     }
 
     public void TakeDamage(int amount)
