@@ -6,10 +6,7 @@ public class EffectiveHealth : MonoBehaviour {
 
     [SerializeField]
     private int m_Health; 
-
-    [SerializeField]
-    private int m_Health; 
-
+    
     public void TakeDamage(int amount)
     {
         m_Health -= amount;
