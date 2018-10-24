@@ -54,6 +54,11 @@ public class Weapon : MonoBehaviour {
                 m_Emitter.Play();
             }
         }
+
+        if(Input.GetButtonUp("PlayerOne_PrimaryFire"))
+        {
+            m_Emitter.Stop();
+        }
 	}
   
     private void FixedUpdate()
