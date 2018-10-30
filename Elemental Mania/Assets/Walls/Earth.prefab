@@ -20,7 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4305036067829518}
   - component: {fileID: 212539286076235500}
-  - component: {fileID: 61500793493781966}
+  - component: {fileID: 61970690685846388}
+  - component: {fileID: 114811977279460100}
+  - component: {fileID: 114815855919154242}
+  - component: {fileID: 114709764682342356}
   m_Layer: 0
   m_Name: Earth
   m_TagString: Untagged
@@ -41,7 +44,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61500793493781966
+--- !u!61 &61970690685846388
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -66,6 +69,40 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114709764682342356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1955514567746480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810a1e1d718804f7997868df9d6fbf7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114811977279460100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1955514567746480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d470cfbbd6a44055b23113161c6689e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Health: 200
+--- !u!114 &114815855919154242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1955514567746480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 580312153246e48539c6b77364ba8fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212539286076235500
 SpriteRenderer:
   m_ObjectHideFlags: 1
