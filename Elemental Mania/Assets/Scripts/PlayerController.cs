@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
     private void FixedUpdate()
-    {
+    { 
         kIsGrounded = Physics2D.OverlapCircle(kGroundCheck.position, kCheckRadius, kGroundLayer);
 
         kMoveInput = Input.GetAxis(kInputMapping.kHorizontalMovement);

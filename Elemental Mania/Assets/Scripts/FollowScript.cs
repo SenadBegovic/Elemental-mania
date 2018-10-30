@@ -7,6 +7,7 @@ public class FollowScript : MonoBehaviour
     public Transform player2;
     private float minSizeY = 5f;
     public Camera m_OrthographicCamera;
+    Vector3 setPosition;
 
     void Start()
     {
@@ -14,8 +15,15 @@ public class FollowScript : MonoBehaviour
 
     void LateUpdate()
     {
-        SetCameraPos();
-        SetCameraSize();
+        if (player2 == null || m_OrthographicCamera == null) {
+            setPosition = transform.position;
+            setPosition.x = player1.transform.position.x;
+            setPosition.y = player1.transform.position.y;
+            transform.position = setPosition;
+        } else {
+            SetCameraPos();
+            SetCameraSize();
+        }
     }
 
     void SetCameraPos()
