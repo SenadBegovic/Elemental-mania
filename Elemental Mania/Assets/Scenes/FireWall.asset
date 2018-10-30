@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 593d7c6cb7e557e46b3c21f47914cae6, type: 3}
   m_Name: FireWall
   m_EditorClassIdentifier: 
-  ktype: 0
-  kMaxHealth: 0
-  kRestiance:
-    Fire: 0
+  ktype: 1
+  kMaxHealth: 100
+  kResistance:
+    Fire: 50
     Frost: 0
     Wind: 0
     Earth: 0

@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EffectiveHealth : MonoBehaviour {
+public class Health : MonoBehaviour {
 
     [SerializeField]
     private int m_Health; 
-    
+
+    private WallStats k
+
     public void TakeDamage(int amount)
     {
         m_Health -= amount;
