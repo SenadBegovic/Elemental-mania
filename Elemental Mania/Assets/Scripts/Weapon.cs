@@ -34,7 +34,7 @@ public class Weapon : MonoBehaviour {
     private int kRaycastMask;
 
     // Use this for initialization
-    void Start () {
+    protected void Start () {
         CoolingPeriod = float.MaxValue * 0.5f;
         m_Emitter = GetComponent<ParticleSystem>();
         Assert.IsTrue(m_Emitter.collision.enabled, "Must have an emitter with collisions enabled");
@@ -43,7 +43,7 @@ public class Weapon : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	protected void Update () {
         CoolingPeriod += Time.deltaTime;
 
         if (Input.GetButtonDown("PlayerOne_PrimaryFire"))
