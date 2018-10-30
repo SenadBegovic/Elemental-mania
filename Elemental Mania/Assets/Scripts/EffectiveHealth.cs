@@ -39,8 +39,4 @@ public class EffectiveHealth : MonoBehaviour {
 	void Start () {
         m_Health = kStartingHealth;
 	}
-	
-	void Update () {
-		
-	}
 }
