@@ -28,11 +28,11 @@ public class PlayerController : MonoBehaviour {
     void Start ()
     {
         kRb = GetComponent<Rigidbody2D>();
-	}
+    }
 
 	void Update ()
     {
-        if (Input.GetButtonDown("PlayerOne_VerticalMovement") && kIsGrounded)
+        if (Input.GetButtonDown(kInputMapping.kVerticalMovement) && kIsGrounded)
         {
             kRb.velocity = Vector2.up * kJumpForce;
         }
