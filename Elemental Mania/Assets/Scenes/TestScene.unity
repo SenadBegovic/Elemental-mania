@@ -24245,7 +24245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kDamage: 0
   kType: 0
-  kCooldown: 0
+  kCooldown: 1
   kInputMapping: {fileID: 11400000, guid: cb49f106427c243298f07b915344afd6, type: 2}
   kDeployableSettings:
     Prefab: {fileID: 1955514567746480, guid: 5c1723389456f48d5ae948b31d372978, type: 2}
