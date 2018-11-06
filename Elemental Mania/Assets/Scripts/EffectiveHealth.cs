@@ -8,11 +8,13 @@ public class EffectiveHealth : MonoBehaviour {
     private int m_Health;
     [SerializeField]
     private int kStartingHealth;
-    private float m_Resistance;
     private int m_Damage;
 
     [SerializeField]
-    private Resistance res;
+    private int m_MaxHealth;
+
+    [SerializeField]
+    private Resistance m_Resistance;
 
     public int CurrentHealth{
         get{
@@ -29,10 +31,16 @@ public class EffectiveHealth : MonoBehaviour {
         m_Health -= amount;
     }
 
+    public float HealthPercentage{
+        get {
+            return m_Health / (float)m_MaxHealth;
+        }
+    }
+
     public void TakeDamage(float amount, ElementalType type)
     {
-        m_Resistance = res.GetResistance(type);
-        m_Damage = (int)System.Math.Round(amount -= amount * (1 - m_Resistance));
+        float resistance = m_Resistance.GetResistance(type);
+        m_Damage = (int)System.Math.Round(amount -= amount * (1.0f - resistance));
         TakeDamage(m_Damage);
     }
 
