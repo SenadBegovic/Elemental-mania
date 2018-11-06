@@ -38,10 +38,14 @@ public class PlayerController : MonoBehaviour {
         }
 	}
 
+    public void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawSphere(kGroundCheck.position, kCheckRadius);
+    }
+
     private void FixedUpdate()
     { 
         kIsGrounded = Physics2D.OverlapCircle(kGroundCheck.position, kCheckRadius, kGroundLayer);
-
         kMoveInput = Input.GetAxis(kInputMapping.kHorizontalMovement);
         kRb.velocity = new Vector2(kMoveInput * kSpeed, kRb.velocity.y);
 
