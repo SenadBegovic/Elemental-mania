@@ -159,7 +159,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &168528617
 Transform:
   m_ObjectHideFlags: 0
@@ -4856,7 +4856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &332207520
 Transform:
   m_ObjectHideFlags: 0
@@ -14519,7 +14519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &563961379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19525,7 +19525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1017032283
 Transform:
   m_ObjectHideFlags: 0
@@ -33863,7 +33863,7 @@ MonoBehaviour:
   - {fileID: 332207524}
   - {fileID: 1017032287}
   - {fileID: 563961379}
-  kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
+  kInputMapping: {fileID: 11400000, guid: cb49f106427c243298f07b915344afd6, type: 2}
 --- !u!70 &1414111950
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
