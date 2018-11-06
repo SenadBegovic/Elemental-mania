@@ -46,7 +46,7 @@ public class Weapon : MonoBehaviour {
 	protected void Update () {
         CoolingPeriod += Time.deltaTime;
 
-        if (Input.GetButtonDown("PlayerOne_PrimaryFire"))
+        if (Input.GetButtonDown(kInputMapping.kPrimaryFire))
         {
             if (CoolingPeriod > kCooldown)
             {
@@ -55,7 +55,7 @@ public class Weapon : MonoBehaviour {
             }
         }
 
-        if(Input.GetButtonUp("PlayerOne_PrimaryFire"))
+        if(Input.GetButtonUp(kInputMapping.kPrimaryFire))
         {
             m_Emitter.Stop();
         }

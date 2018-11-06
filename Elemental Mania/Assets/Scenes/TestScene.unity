@@ -159,7 +159,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &168528617
 Transform:
   m_ObjectHideFlags: 0
@@ -4832,7 +4832,7 @@ MonoBehaviour:
   kDamage: 50
   kType: 1
   kCooldown: 2
-  kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
+  kInputMapping: {fileID: 11400000, guid: cb49f106427c243298f07b915344afd6, type: 2}
   kDeployableSettings:
     Prefab: {fileID: 1141497885051536, guid: 8e954a90c7c9e4a8e9c0228fc4dda751, type: 2}
     StartingHealth: 100
@@ -4856,7 +4856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &332207520
 Transform:
   m_ObjectHideFlags: 0
@@ -9520,7 +9520,7 @@ MonoBehaviour:
   kDamage: 0
   kType: 0
   kCooldown: 0
-  kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
+  kInputMapping: {fileID: 11400000, guid: cb49f106427c243298f07b915344afd6, type: 2}
   kDeployableSettings:
     Prefab: {fileID: 1888713301590692, guid: 95598676bb0964e3fa4b7eff778a8a81, type: 2}
     StartingHealth: 100
@@ -14519,7 +14519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &563961379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14534,7 +14534,7 @@ MonoBehaviour:
   kDamage: 0
   kType: 0
   kCooldown: 0
-  kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
+  kInputMapping: {fileID: 11400000, guid: cb49f106427c243298f07b915344afd6, type: 2}
   kDeployableSettings:
     Prefab: {fileID: 1195842837578154, guid: 13a8aded804d345b5927519a79c4e1a6, type: 2}
     StartingHealth: 10
@@ -19525,7 +19525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1017032283
 Transform:
   m_ObjectHideFlags: 0
@@ -24246,7 +24246,7 @@ MonoBehaviour:
   kDamage: 0
   kType: 0
   kCooldown: 0
-  kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
+  kInputMapping: {fileID: 11400000, guid: cb49f106427c243298f07b915344afd6, type: 2}
   kDeployableSettings:
     Prefab: {fileID: 1955514567746480, guid: 5c1723389456f48d5ae948b31d372978, type: 2}
     StartingHealth: 100
