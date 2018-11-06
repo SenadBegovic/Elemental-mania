@@ -1,8 +1,9 @@
-﻿Shader "Unlit/RadialShader"
+﻿Shader "Unlit/RadialTextureShader"
 {
     Properties
     {
-        _Fill ("Fill", Range(0.0, 1.0)) = 0.5
+        _MyTexture("Gradient", 2D) = "white" {}
+        _Gradient("Radial", Range(0.00, 1.0)) = 0.5
     }
     SubShader
     {
@@ -51,29 +52,14 @@
                 return o;
             }
 
-            static const float PI = 3.1415;
-            static const float PI_2 = 2.0*3.1415;
+            sampler2D _MyTexture;
+            float _Gradient;
 
-            float _Fill;
-            static const float radius = 0.5;
-
-            
             fixed4 frag (v2f i) : SV_Target
             {
                 fixed4 col;
-                float2 offset = float2(0.5, 0.5);
-    
-                float2 origo = i.uv - offset;
-                
-                float angle = atan2(origo.y , origo.x) + PI;
-                
-                //fragColor = vec4(0, origo.y, origo.x, 1.0);
-                // Output to screen
-                
-                float distance = length(origo);
-                const float angleEnd = PI_2 * _Fill;
-
-                if(angle < angleEnd && distance < radius)
+                half4 sample = tex2D(_MyTexture, i.uv);
+                if(sample.a > 1 - _Gradient)
                 {
                     col = float4(float3(1, 0, 0) , 1.0);
                 }
