@@ -4939,9 +4939,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc51ad8355c7439e90bad4ff2125ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kDamage: 50
+  kDamage: 3
   kType: 1
-  kCooldown: 2
+  kCooldown: 0
   kInputMapping: {fileID: 11400000, guid: cb49f106427c243298f07b915344afd6, type: 2}
   kDeployableSettings:
     Prefab: {fileID: 1141497885051536, guid: 8e954a90c7c9e4a8e9c0228fc4dda751, type: 2}
@@ -9760,9 +9760,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc51ad8355c7439e90bad4ff2125ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kDamage: 0
+  kDamage: 1
   kType: 0
-  kCooldown: 0
+  kCooldown: 1
   kInputMapping: {fileID: 11400000, guid: cb49f106427c243298f07b915344afd6, type: 2}
   kDeployableSettings:
     Prefab: {fileID: 1888713301590692, guid: 95598676bb0964e3fa4b7eff778a8a81, type: 2}
@@ -9858,9 +9858,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc51ad8355c7439e90bad4ff2125ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kDamage: 0
+  kDamage: 5
   kType: 0
-  kCooldown: 0
+  kCooldown: 1
   kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
   kDeployableSettings:
     Prefab: {fileID: 1195842837578154, guid: 13a8aded804d345b5927519a79c4e1a6, type: 2}
@@ -14732,9 +14732,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc51ad8355c7439e90bad4ff2125ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kDamage: 0
+  kDamage: 5
   kType: 0
-  kCooldown: 0
+  kCooldown: 1
   kInputMapping: {fileID: 11400000, guid: cb49f106427c243298f07b915344afd6, type: 2}
   kDeployableSettings:
     Prefab: {fileID: 1195842837578154, guid: 13a8aded804d345b5927519a79c4e1a6, type: 2}
@@ -19823,6 +19823,11 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 61521956344279970, guid: ba76da169fefb4040b499e95df24001a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba76da169fefb4040b499e95df24001a, type: 2}
   m_IsPrefabAsset: 0
@@ -24887,9 +24892,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc51ad8355c7439e90bad4ff2125ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kDamage: 0
+  kDamage: 150
   kType: 0
-  kCooldown: 1
+  kCooldown: 4
   kInputMapping: {fileID: 11400000, guid: cb49f106427c243298f07b915344afd6, type: 2}
   kDeployableSettings:
     Prefab: {fileID: 1955514567746480, guid: 5c1723389456f48d5ae948b31d372978, type: 2}
@@ -24985,9 +24990,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc51ad8355c7439e90bad4ff2125ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kDamage: 0
+  kDamage: 150
   kType: 0
-  kCooldown: 0
+  kCooldown: 4
   kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
   kDeployableSettings:
     Prefab: {fileID: 1955514567746480, guid: 5c1723389456f48d5ae948b31d372978, type: 2}
@@ -29720,6 +29725,11 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 0.675
       objectReference: {fileID: 0}
+    - target: {fileID: 61521956344279970, guid: ba76da169fefb4040b499e95df24001a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba76da169fefb4040b499e95df24001a, type: 2}
   m_IsPrefabAsset: 0
@@ -29927,7 +29937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc51ad8355c7439e90bad4ff2125ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kDamage: 50
+  kDamage: 3
   kType: 1
   kCooldown: 2
   kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
@@ -35426,9 +35436,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc51ad8355c7439e90bad4ff2125ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kDamage: 0
+  kDamage: 1
   kType: 0
-  kCooldown: 0
+  kCooldown: 1
   kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
   kDeployableSettings:
     Prefab: {fileID: 1888713301590692, guid: 95598676bb0964e3fa4b7eff778a8a81, type: 2}
