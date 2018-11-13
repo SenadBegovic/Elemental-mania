@@ -5,16 +5,16 @@ using UnityEngine;
 [System.Serializable]
 public struct Resistance {
     
-    [Range(0.0f, 1.0f)]
+    [Range(0.0f, 2.0f)]
     public float Fire;
 
-    [Range(0.0f, 1.0f)]
+    [Range(0.0f, 2.0f)]
     public float Frost;
 
-    [Range(0.0f, 1.0f)]
+    [Range(0.0f, 2.0f)]
     public float Wind;
 
-    [Range(0.0f, 1.0f)]
+    [Range(0.0f, 2.0f)]
     public float Earth;
 
     public float GetResistance(ElementalType type)

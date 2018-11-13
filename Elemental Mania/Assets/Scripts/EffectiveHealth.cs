@@ -40,7 +40,7 @@ public class EffectiveHealth : MonoBehaviour {
     public void TakeDamage(float amount, ElementalType type)
     {
         float resistance = m_Resistance.GetResistance(type);
-        m_Damage = (int)System.Math.Round(amount -= amount * (1.0f - resistance));
+        m_Damage = (int)System.Math.Round(amount * (1.0f - resistance));
         TakeDamage(m_Damage);
     }
 

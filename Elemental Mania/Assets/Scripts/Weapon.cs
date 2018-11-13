@@ -73,11 +73,7 @@ public class Weapon : MonoBehaviour {
             {
                 Transform locationTransform = raycast.collider.transform;
                 // Slot already has a wall in place, heal if same type
-                if(locationTransform.childCount > 0)
-                {
-                    HealWall(locationTransform);
-                }
-                else
+                if(locationTransform.childCount == 0)
                 {
                     SpawnWall(locationTransform);
                 }
@@ -89,7 +85,7 @@ public class Weapon : MonoBehaviour {
     private void HealWall(Transform locationTransform)
     {
         // First, get the child object
-        GameObject wallObject = locationTransform.GetChild(0).gameObject;
+        GameObject wallObject = locationTransform.gameObject;
         EffectiveHealth health = wallObject.GetComponent<EffectiveHealth>();
 
         health.CurrentHealth += kRepairRate;
