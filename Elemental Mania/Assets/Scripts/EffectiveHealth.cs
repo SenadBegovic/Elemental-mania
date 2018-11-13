@@ -28,7 +28,8 @@ public class EffectiveHealth : MonoBehaviour {
 
     public void TakeDamage(int amount)
     {
-        m_Health -= amount;
+        int newHealth = m_Health - amount;
+        m_Health = Mathf.Clamp(newHealth, 0, m_MaxHealth);
     }
 
     public float HealthPercentage{
