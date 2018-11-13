@@ -99,7 +99,5 @@ public class Weapon : MonoBehaviour {
     {
         GameObject newWall = GameObject.Instantiate(kDeployableSettings.Prefab, locationTransform.position, locationTransform.rotation, locationTransform);
         newWall.transform.localScale = new Vector3(1, 1, 1);
-        EffectiveHealth health = newWall.GetComponent<EffectiveHealth>();
-        health.CurrentHealth = kDeployableSettings.StartingHealth;
     }
 }
