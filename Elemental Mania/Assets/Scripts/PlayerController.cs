@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(PowerMultipliers))]
 public class PlayerController : MonoBehaviour {
     [SerializeField]
     private float kSpeed;
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     private bool kFacingRight = true;
 
+    private PowerMultipliers kPowerMultiplier;
     private Rigidbody2D kRb;
     [SerializeField]
     private Vector2 kMoveVelocity;
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour {
 
     void Start ()
     {
+        kPowerMultiplier = GetComponent<PowerMultipliers>();
         kRb = GetComponent<Rigidbody2D>();
     }
 
@@ -47,7 +50,7 @@ public class PlayerController : MonoBehaviour {
     { 
         kIsGrounded = Physics2D.OverlapCircle(kGroundCheck.position, kCheckRadius, kGroundLayer);
         kMoveInput = Input.GetAxis(kInputMapping.kHorizontalMovement);
-        kRb.velocity = new Vector2(kMoveInput * kSpeed, kRb.velocity.y);
+        kRb.velocity = new Vector2(kMoveInput * kSpeed * kPowerMultiplier.Movement, kRb.velocity.y);
 
         if(kFacingRight == false && kMoveInput > 0)
         {
