@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(PowerMultipliers))]
 public class PowerupController : MonoBehaviour {
     private int kPowerupLayer;
     [System.Serializable]
@@ -12,7 +11,7 @@ public class PowerupController : MonoBehaviour {
         public PowerUpBase Powerup;
         public float Timeout;
     }
-    private PowerMultipliers kPowerMultiplier;
+
     [SerializeField]
     private List<ActivePowerup> m_ActivePowerups;
     private float m_CurrentTime;
@@ -20,7 +19,6 @@ public class PowerupController : MonoBehaviour {
     private void Start()
     {
         m_ActivePowerups = new List<ActivePowerup>();
-        kPowerMultiplier = GetComponent<PowerMultipliers>();
         kPowerupLayer = LayerMask.NameToLayer("PowerUp");
         m_CurrentTime = 0;
     }
@@ -39,7 +37,7 @@ public class PowerupController : MonoBehaviour {
             {
                 if(p.Timeout < m_CurrentTime)
                 {
-                    p.Powerup.Remove(kPowerMultiplier);
+                    p.Powerup.Remove(gameObject);
                     return true;
                 }
                 return false;
@@ -53,7 +51,7 @@ public class PowerupController : MonoBehaviour {
         // If we do not have the power, we need to apply its effect and add it to the timeout queue
         if (powerUpIndex == -1)
         {
-            powerup.Apply(kPowerMultiplier);
+            powerup.Apply(gameObject);
             Enqueue(powerup);
         }
         else // Otherwise we need to extend its duration(without applying it)

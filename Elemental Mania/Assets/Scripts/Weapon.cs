@@ -6,7 +6,7 @@ using UnityEngine.Assertions;
 [RequireComponent(typeof(ParticleSystem))]
 public class Weapon : MonoBehaviour {
     
-    public int kDamage;
+    public int kBaseDamage;
     public ElementalType kType;
     public int kCooldown;
 

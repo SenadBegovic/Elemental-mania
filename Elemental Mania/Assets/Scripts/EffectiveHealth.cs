@@ -14,7 +14,7 @@ public class EffectiveHealth : MonoBehaviour {
     private int m_MaxHealth;
 
     [SerializeField]
-    private Resistance m_Resistance;
+    public Resistance m_Resistance;
 
     public int CurrentHealth{
         get{

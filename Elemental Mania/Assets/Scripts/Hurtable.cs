@@ -23,6 +23,6 @@ public class Hurtable : MonoBehaviour {
         int hitCount = ParticlePhysicsExtensions.GetSafeCollisionEventSize(system);
         ParticlePhysicsExtensions.GetCollisionEvents(system, gameObject, m_CollisionEventBuffer);
 
-        kHealth.TakeDamage(weapon.kDamage * hitCount, weapon.kType);
+        kHealth.TakeDamage(weapon.kBaseDamage * hitCount, weapon.kType);
     }
 }

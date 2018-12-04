@@ -2,6 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public struct BoostableValue
+{
+    public void Boost(float amount)
+    {
+        m_Multiplier += amount;
+    }
+
+    public void SetBack(float amount)
+    {
+        m_Multiplier -= amount;
+    }
+
+    [SerializeField]
+    private float m_Multiplier;
+    [SerializeField]
+    private float m_BaseValue;
+    public float value
+    {
+        get
+        {
+            return m_BaseValue * m_Multiplier;
+        }
+    }
+}
+
 public abstract class PowerUpBase : ScriptableObject {
 
     [SerializeField]
@@ -14,23 +40,10 @@ public abstract class PowerUpBase : ScriptableObject {
             return kDuration;
         }
     }
-    
-    public abstract void Apply(PowerMultipliers multi);
-    public abstract void Remove(PowerMultipliers multi);
+
+    public abstract Color GetColor();
+    public abstract void Apply(GameObject player);
+    public abstract void Remove(GameObject player);
 }
 
-[CreateAssetMenu(menuName = "PowerUps/Speed")]
-public class PowerupSpeed : PowerUpBase
-{
-    [SerializeField]
-    private float kSpeedBonus;
-    public override void Apply(PowerMultipliers multi)
-    {
-        multi.Movement += kSpeedBonus;
-    }
 
-    public override void Remove(PowerMultipliers multi)
-    {
-        multi.Movement -= kSpeedBonus;
-    }
-}

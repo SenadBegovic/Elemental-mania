@@ -4,7 +4,6 @@ using UnityEngine;
 
 [System.Serializable]
 public struct Resistance {
-    
     [Range(0.0f, 2.0f)]
     public float Fire;
 
