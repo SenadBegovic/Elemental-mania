@@ -433,7 +433,7 @@ MonoBehaviour:
   Damage:
     m_Multiplier: 1
     m_BaseValue: 1
-  kType: 0
+  kType: 2
   kCooldown: 1
   kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
   kDeployableSettings:
@@ -4160,7 +4160,7 @@ ParticleSystem:
     radiusScale: 0.5
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 27959
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -8693,7 +8693,7 @@ ParticleSystem:
     radiusScale: 0.5
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 27959
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -13283,7 +13283,7 @@ ParticleSystem:
     radiusScale: 0.5
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 27959
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -17825,7 +17825,7 @@ ParticleSystem:
     radiusScale: 0.5
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 27959
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5

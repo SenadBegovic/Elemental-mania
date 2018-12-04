@@ -9,10 +9,15 @@ public class Hurtable : MonoBehaviour {
     private EffectiveHealth kHealth;
 
     private List<ParticleCollisionEvent> m_CollisionEventBuffer;
+    /// <summary>
+    /// Used for knockback effect from wind type - might be null
+    /// </summary>
+    private Rigidbody2D kRigidBody;
 	// Use this for initialization
 	void Start () {
         kHealth = GetComponent<EffectiveHealth>();
         m_CollisionEventBuffer = new List<ParticleCollisionEvent>();
+        kRigidBody = GetComponent<Rigidbody2D>();
 	}
 
     private void OnParticleCollision(GameObject other)
@@ -24,5 +29,13 @@ public class Hurtable : MonoBehaviour {
         ParticlePhysicsExtensions.GetCollisionEvents(system, gameObject, m_CollisionEventBuffer);
 
         kHealth.TakeDamage(weapon.Damage.value * hitCount, weapon.kType);
+        if(weapon.kType == ElementalType.WIND && kRigidBody != null)
+        {
+            Debug.DrawRay(transform.position, transform.position - other.transform.position, Color.green, 5);
+            Vector3 directionPosition = transform.position + new Vector3(0, 0.25f, 0);
+            Vector3 direction = (directionPosition - other.transform.position);
+            Vector2 realDirection = new Vector2(direction.x, direction.y);
+            kRigidBody.AddForce(realDirection.normalized * 500, ForceMode2D.Force);
+        }
     }
 }
