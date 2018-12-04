@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 70725010021607328}
   - component: {fileID: 114795483399508732}
   - component: {fileID: 114966844918606600}
-  - component: {fileID: 114022239553023858}
+  - component: {fileID: 114187026519985572}
   m_Layer: 13
   m_Name: PlayerOne
   m_TagString: PlayerOne
@@ -331,7 +331,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
---- !u!114 &114022239553023858
+--- !u!114 &114187026519985572
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -339,10 +339,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1007954665919436}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a6d92da7df32b1449c82d8af44feafe, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d470cfbbd6a44055b23113161c6689e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Movement: 1
+  m_Health: 100
+  kStartingHealth: 100
+  m_MaxHealth: 120
+  m_Resistance:
+    Fire: 0
+    Frost: 0
+    Wind: 0
+    Earth: 0
 --- !u!114 &114393652035959678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -354,7 +361,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc51ad8355c7439e90bad4ff2125ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kDamage: 5
+  Damage:
+    m_Multiplier: 1
+    m_BaseValue: 5
   kType: 0
   kCooldown: 1
   kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
@@ -374,7 +383,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc51ad8355c7439e90bad4ff2125ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kDamage: 150
+  Damage:
+    m_Multiplier: 1
+    m_BaseValue: 150
   kType: 0
   kCooldown: 4
   kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
@@ -394,7 +405,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc51ad8355c7439e90bad4ff2125ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kDamage: 1
+  Damage:
+    m_Multiplier: 1
+    m_BaseValue: 1
   kType: 0
   kCooldown: 1
   kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
@@ -431,13 +444,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb53b716c6bd54d4a9769dddcbafeed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kSpeed: 3
-  kJumpForce: 7
+  kSpeed:
+    m_Multiplier: 1
+    m_BaseValue: 5
+  kJumpForce: 8
   kMoveInput: 0
   kFacingRight: 1
   kMoveVelocity: {x: 0, y: 0}
   kGroundCheck: {fileID: 4042231084969288}
-  kCheckRadius: 0.5
+  kCheckRadius: 0.35
   kGroundLayer:
     serializedVersion: 2
     m_Bits: 16640
@@ -465,9 +480,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc51ad8355c7439e90bad4ff2125ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kDamage: 3
+  Damage:
+    m_Multiplier: 1
+    m_BaseValue: 3
   kType: 1
-  kCooldown: 2
+  kCooldown: 0
   kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
   kDeployableSettings:
     Prefab: {fileID: 1141497885051536, guid: 8e954a90c7c9e4a8e9c0228fc4dda751, type: 2}
