@@ -32,6 +32,13 @@ public class Weapon : MonoBehaviour {
 
     private int kRaycastMask;
 
+    // We use the rigidbody, to figure out how fast the player is moving
+    // Then we use the cached field kEmissionVelocity to figure out how 
+    // fast the particle system must move in relation to the player
+    // NOTE: This is a copy of the initial emission velocity set on the particle system
+    private Rigidbody2D kRigidBody;
+    private float kEmissionVelocity;
+
     // Use this for initialization
     protected void Start () {
         CoolingPeriod = float.MaxValue * 0.5f;
@@ -39,6 +46,9 @@ public class Weapon : MonoBehaviour {
         Assert.IsTrue(m_Emitter.collision.enabled, "Must have an emitter with collisions enabled");
 
         kRaycastMask = LayerMask.GetMask("WallSlot");
+        kRigidBody = GetComponentInParent<Rigidbody2D>();
+
+        kEmissionVelocity = m_Emitter.main.startSpeed.constant;
 	}
 	
 	// Update is called once per frame
@@ -54,7 +64,12 @@ public class Weapon : MonoBehaviour {
             }
         }
 
-        if(Input.GetButtonUp(kInputMapping.kPrimaryFire))
+        // Update emission velocity to prevent walking into own fire
+      
+        ParticleSystem.MainModule main = m_Emitter.main;
+        main.startSpeed = Mathf.Abs(kRigidBody.velocity.x) + kEmissionVelocity;
+
+        if (Input.GetButtonUp(kInputMapping.kPrimaryFire))
         {
             m_Emitter.Stop();
         }

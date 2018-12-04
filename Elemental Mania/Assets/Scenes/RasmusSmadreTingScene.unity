@@ -870,6 +870,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 198475582655222076, guid: e19752954c9fbbc4c9267b5918bbbe82,
+        type: 2}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 27959
+      objectReference: {fileID: 0}
+    - target: {fileID: 198377119169569880, guid: e19752954c9fbbc4c9267b5918bbbe82,
+        type: 2}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 27959
+      objectReference: {fileID: 0}
+    - target: {fileID: 198221298515273364, guid: e19752954c9fbbc4c9267b5918bbbe82,
+        type: 2}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 27959
+      objectReference: {fileID: 0}
+    - target: {fileID: 198121489563958024, guid: e19752954c9fbbc4c9267b5918bbbe82,
+        type: 2}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 27959
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e19752954c9fbbc4c9267b5918bbbe82, type: 2}
   m_IsPrefabAsset: 0
@@ -1265,12 +1285,32 @@ Prefab:
         type: 2}
     - target: {fileID: 1042830304506004, guid: e19752954c9fbbc4c9267b5918bbbe82, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198377119169569880, guid: e19752954c9fbbc4c9267b5918bbbe82,
         type: 2}
       propertyPath: ShapeModule.m_Position.x
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 198121489563958024, guid: e19752954c9fbbc4c9267b5918bbbe82,
+        type: 2}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 27959
+      objectReference: {fileID: 0}
+    - target: {fileID: 198475582655222076, guid: e19752954c9fbbc4c9267b5918bbbe82,
+        type: 2}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 27959
+      objectReference: {fileID: 0}
+    - target: {fileID: 198377119169569880, guid: e19752954c9fbbc4c9267b5918bbbe82,
+        type: 2}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 27959
+      objectReference: {fileID: 0}
+    - target: {fileID: 198221298515273364, guid: e19752954c9fbbc4c9267b5918bbbe82,
+        type: 2}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 27959
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e19752954c9fbbc4c9267b5918bbbe82, type: 2}

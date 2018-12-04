@@ -5,10 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(EffectiveHealth))]
 public class PowerUpDestructableSpawner : PowerUpSpawnerBase
 {
-
-    [SerializeField]
-    private PowerUpBase[] m_DestructEffects;
-
     private EffectiveHealth kHealth;
 
     private GameObject m_LastDamageCommitter;
@@ -39,6 +35,7 @@ public class PowerUpDestructableSpawner : PowerUpSpawnerBase
                 PowerupController controller = m_LastDamageCommitter.GetComponentInParent<PowerupController>();
                 if(controller != null)
                     controller.Apply(m_CurrentEffect);
+                m_LastDamageCommitter = null;
             }
             Expire();
         }
