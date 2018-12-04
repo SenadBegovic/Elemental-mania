@@ -7,6 +7,14 @@ public class WeaponController : MonoBehaviour {
     [SerializeField]
     Weapon[] kWeapons;
 
+    public Weapon[] Weapons
+    {
+        get
+        {
+            return kWeapons;
+        }
+    }
+
     private int m_CurrentWeaponIndex;
 
     [SerializeField]
@@ -22,6 +30,7 @@ public class WeaponController : MonoBehaviour {
         SwitchTo(0);
 	}
 	
+
     void SwitchTo(int nextIndex)
     {
         kWeapons[m_CurrentWeaponIndex].gameObject.SetActive(false);

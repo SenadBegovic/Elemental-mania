@@ -2,11 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "PowerUps/Damage")]
 public class PowerupDamage : PowerUpBase
 {
+    [SerializeField]
+    private float kDamageBoost;
     public override void Apply(GameObject player)
     {
-        p
+        WeaponController controller = player.GetComponent<WeaponController>();
+        if(controller != null)
+        {
+            Weapon[] weapons = controller.Weapons;
+            for (int i = 0; i < weapons.Length; i++)
+            {
+                weapons[i].Damage.Boost(kDamageBoost);
+            }
+        }
     }
 
     public override Color GetColor()
@@ -16,6 +27,14 @@ public class PowerupDamage : PowerUpBase
 
     public override void Remove(GameObject player)
     {
-        throw new System.NotImplementedException();
+        WeaponController controller = player.GetComponent<WeaponController>();
+        if (controller != null)
+        {
+            Weapon[] weapons = controller.Weapons;
+            for (int i = 0; i < weapons.Length; i++)
+            {
+                weapons[i].Damage.SetBack(kDamageBoost);
+            }
+        }
     }
 }
