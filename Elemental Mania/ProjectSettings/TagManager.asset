@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerOne
   - PlayerTwo
+  - PlayerLocator
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - NonPassableWall
   - WallSlot
   - Player
-  - 
+  - PowerUp
   - 
   - 
   - 

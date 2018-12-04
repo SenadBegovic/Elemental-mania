@@ -21,7 +21,6 @@ public class FixedScale : MonoBehaviour {
         transform.localScale = new Vector3(1, 1, 1);
         var res = transform.localToWorldMatrix;
         Vector3 worldScaleVector = new Vector3(res.GetColumn(0).magnitude, res.GetColumn(1).magnitude);
-        Debug.Log(worldScaleVector);
         transform.localScale = new Vector3(m_FixedScale.x / worldScaleVector.x , m_FixedScale.y / worldScaleVector.y , 1);
    
     }

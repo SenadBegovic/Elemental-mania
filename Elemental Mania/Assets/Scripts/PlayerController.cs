@@ -2,14 +2,14 @@
 
 public class PlayerController : MonoBehaviour {
     [SerializeField]
-    private float kSpeed;
+    public BoostableValue kSpeed;
     [SerializeField]
     private float kJumpForce;
     [SerializeField]
     private float kMoveInput;
     [SerializeField]
     private bool kFacingRight = true;
-
+    
     private Rigidbody2D kRb;
     [SerializeField]
     private Vector2 kMoveVelocity;
@@ -47,18 +47,18 @@ public class PlayerController : MonoBehaviour {
     { 
         kIsGrounded = Physics2D.OverlapCircle(kGroundCheck.position, kCheckRadius, kGroundLayer);
         kMoveInput = Input.GetAxis(kInputMapping.kHorizontalMovement);
-        kRb.velocity = new Vector2(kMoveInput * kSpeed, kRb.velocity.y);
+        kRb.velocity = new Vector2(kMoveInput * kSpeed.value, kRb.velocity.y);
 
         if(kFacingRight == false && kMoveInput > 0)
         {
-            flip();
+            Flip();
         } else if(kFacingRight == true && kMoveInput < 0)
         {
-            flip();
+            Flip();
         }
    }
 
-    private void flip()
+    private void Flip()
     {
         kFacingRight = !kFacingRight;
         transform.Rotate(Vector2.up, 180);

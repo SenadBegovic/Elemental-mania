@@ -14,7 +14,7 @@ public class EffectiveHealth : MonoBehaviour {
     private int m_MaxHealth;
 
     [SerializeField]
-    private Resistance m_Resistance;
+    public Resistance m_Resistance;
 
     public int CurrentHealth{
         get{
@@ -24,6 +24,11 @@ public class EffectiveHealth : MonoBehaviour {
         set{
             m_Health = value;
         }
+    }
+
+    public void SetHealthPercentage(float percentage)
+    {
+        m_Health = (int)(m_MaxHealth * percentage);
     }
 
     public void TakeDamage(int amount)
