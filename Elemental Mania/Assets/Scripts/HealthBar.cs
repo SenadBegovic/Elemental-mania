@@ -13,7 +13,7 @@ public class HealthBar : MonoBehaviour {
     private int mCurrentValue;
     private float mCurrentPercentage;
 
-    void Start () {
+    void Start () { 
         SetHealth(player.CurrentHealth);
 	}
 
