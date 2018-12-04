@@ -26,6 +26,11 @@ public class EffectiveHealth : MonoBehaviour {
         }
     }
 
+    public void SetHealthPercentage(float percentage)
+    {
+        m_Health = (int)(m_MaxHealth * percentage);
+    }
+
     public void TakeDamage(int amount)
     {
         int newHealth = m_Health - amount;
