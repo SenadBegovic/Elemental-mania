@@ -47,7 +47,9 @@ public class PlayerController : MonoBehaviour {
     { 
         kIsGrounded = Physics2D.OverlapCircle(kGroundCheck.position, kCheckRadius, kGroundLayer);
         kMoveInput = Input.GetAxis(kInputMapping.kHorizontalMovement);
-        kRb.velocity = new Vector2(kMoveInput * kSpeed.value, kRb.velocity.y);
+        Vector2 currentVelocity = kRb.velocity;
+        if(kMoveInput != 0)
+            kRb.velocity = new Vector2(Mathf.Lerp(currentVelocity.x, kMoveInput * kSpeed.value, 0.25f), kRb.velocity.y);
 
         if(kFacingRight == false && kMoveInput > 0)
         {
