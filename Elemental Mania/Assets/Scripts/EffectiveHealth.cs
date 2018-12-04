@@ -43,6 +43,14 @@ public class EffectiveHealth : MonoBehaviour {
         }
     }
 
+    public int MaxHealth
+    {
+        get
+        {
+            return m_MaxHealth;
+        }
+    }
+
     public void TakeDamage(float amount, ElementalType type)
     {
         float resistance = m_Resistance.GetResistance(type);
