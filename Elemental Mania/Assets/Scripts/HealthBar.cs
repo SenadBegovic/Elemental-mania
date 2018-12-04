@@ -14,12 +14,16 @@ public class HealthBar : MonoBehaviour {
     private float mCurrentPercentage;
 
     void Start () {
-        player = GetComponent<EffectiveHealth>();
         SetHealth(player.CurrentHealth);
 	}
-	
-	
-	public void SetHealth(int health)
+
+    private void Update()
+    {
+        SetHealth(player.CurrentHealth);
+    }
+
+
+    public void SetHealth(int health)
     {
         if(health > Max * 2)
         {
