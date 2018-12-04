@@ -478,9 +478,9 @@ MonoBehaviour:
     Frost: 0
     Wind: 0
     Earth: 0
---- !u!114 &750782848 stripped
+--- !u!114 &750782856 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114187026519985572, guid: e19752954c9fbbc4c9267b5918bbbe82,
+  m_CorrespondingSourceObject: {fileID: 114283757280878766, guid: e19752954c9fbbc4c9267b5918bbbe82,
     type: 2}
   m_PrefabInternal: {fileID: 1107144353}
   m_Script: {fileID: 11500000, guid: 6d470cfbbd6a44055b23113161c6689e, type: 3}
@@ -746,7 +746,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 750782848}
+      objectReference: {fileID: 750782856}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 936fe3c663580924cbdc2ed9abcd5738, type: 2}
   m_IsPrefabAsset: 0
@@ -974,7 +974,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1976223086}
+      objectReference: {fileID: 1976223094}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 936fe3c663580924cbdc2ed9abcd5738, type: 2}
   m_IsPrefabAsset: 0
@@ -1481,9 +1481,9 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1007954665919436, guid: e19752954c9fbbc4c9267b5918bbbe82,
     type: 2}
   m_PrefabInternal: {fileID: 1779204437}
---- !u!114 &1976223086 stripped
+--- !u!114 &1976223094 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114187026519985572, guid: e19752954c9fbbc4c9267b5918bbbe82,
+  m_CorrespondingSourceObject: {fileID: 114283757280878766, guid: e19752954c9fbbc4c9267b5918bbbe82,
     type: 2}
   m_PrefabInternal: {fileID: 1779204437}
   m_Script: {fileID: 11500000, guid: 6d470cfbbd6a44055b23113161c6689e, type: 3}
