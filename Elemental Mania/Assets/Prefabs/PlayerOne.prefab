@@ -25,7 +25,9 @@ GameObject:
   - component: {fileID: 70725010021607328}
   - component: {fileID: 114795483399508732}
   - component: {fileID: 114966844918606600}
-  - component: {fileID: 114187026519985572}
+  - component: {fileID: 114283757280878766}
+  - component: {fileID: 114489091075713996}
+  - component: {fileID: 114094041788301324}
   m_Layer: 13
   m_Name: PlayerOne
   m_TagString: PlayerOne
@@ -331,7 +333,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
---- !u!114 &114187026519985572
+--- !u!114 &114094041788301324
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1007954665919436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810a1e1d718804f7997868df9d6fbf7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kHealth: {fileID: 114283757280878766}
+--- !u!114 &114283757280878766
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -342,9 +356,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d470cfbbd6a44055b23113161c6689e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Health: 100
-  kStartingHealth: 100
-  m_MaxHealth: 120
+  m_Health: 300
+  kStartingHealth: 300
+  m_MaxHealth: 600
   m_Resistance:
     Fire: 0
     Frost: 0
@@ -368,10 +382,21 @@ MonoBehaviour:
   kCooldown: 1
   kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
   kDeployableSettings:
-    Prefab: {fileID: 1195842837578154, guid: 13a8aded804d345b5927519a79c4e1a6, type: 2}
+    Prefab: {fileID: 1978077305258822, guid: 3abee2e7b68754cb6b86c17905d03ab4, type: 2}
     StartingHealth: 10
   kRepairRate: 10
   kDeployRange: 15
+--- !u!114 &114489091075713996
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1007954665919436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 580312153246e48539c6b77364ba8fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114630168001122204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -390,7 +415,7 @@ MonoBehaviour:
   kCooldown: 4
   kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
   kDeployableSettings:
-    Prefab: {fileID: 1955514567746480, guid: 5c1723389456f48d5ae948b31d372978, type: 2}
+    Prefab: {fileID: 1936736645133010, guid: 720515f362ae14d5f903f25dfac20a08, type: 2}
     StartingHealth: 100
   kRepairRate: 10
   kDeployRange: 15
@@ -412,7 +437,7 @@ MonoBehaviour:
   kCooldown: 1
   kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
   kDeployableSettings:
-    Prefab: {fileID: 1888713301590692, guid: 95598676bb0964e3fa4b7eff778a8a81, type: 2}
+    Prefab: {fileID: 1267443839184982, guid: 283d6d12de5d94c939b4e94a87b8e20b, type: 2}
     StartingHealth: 100
   kRepairRate: 10
   kDeployRange: 15
@@ -487,7 +512,7 @@ MonoBehaviour:
   kCooldown: 0
   kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
   kDeployableSettings:
-    Prefab: {fileID: 1141497885051536, guid: 8e954a90c7c9e4a8e9c0228fc4dda751, type: 2}
+    Prefab: {fileID: 1752659126221834, guid: 1a074561045b349dfad97ab4d0c0edbe, type: 2}
     StartingHealth: 100
   kRepairRate: 10
   kDeployRange: 15
@@ -13258,7 +13283,7 @@ ParticleSystem:
     radiusScale: 0.5
     collidesWith:
       serializedVersion: 2
-      m_Bits: 0
+      m_Bits: 4294967295
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5

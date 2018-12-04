@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd2391af27b7b544a22c116c42965a2, type: 3}
   m_Name: Ice
   m_EditorClassIdentifier: 
-  kDuration: 5
+  kDuration: 15
