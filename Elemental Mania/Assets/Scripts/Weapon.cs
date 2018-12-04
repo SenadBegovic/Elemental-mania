@@ -64,7 +64,8 @@ public class Weapon : MonoBehaviour {
             }
         }
 
-        // Update emission velocity to prevent walking into own fire      
+        // Update emission velocity to prevent walking into own fire
+      
         ParticleSystem.MainModule main = m_Emitter.main;
         main.startSpeed = Mathf.Abs(kRigidBody.velocity.x) + kEmissionVelocity;
 
