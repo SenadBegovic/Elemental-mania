@@ -3,6 +3,7 @@
 	Properties
 	{
 		_OuterMultiplier ("Outer Multiplier", Range(0.0, 5.0)) = 1.0
+		_Color ("Color", Color) = (1, 0, 0, 1)
 	}
 	SubShader
 	{
@@ -45,6 +46,7 @@
 			};
 
 			float _OuterMultiplier;
+			fixed4 _Color;
 			
 			v2f vert (appdata v)
 			{
@@ -56,7 +58,7 @@
 			
 			fixed4 frag (v2f i) : SV_Target
 			{
-				fixed4 col = fixed4(0.75, 0, 0, 1 - ( (pow(2.0*((i.uv.x - 0.5)), 2.0) + _OuterMultiplier) * lerp(0.75, 1, 0.5*(_CosTime.w + 1))));
+				fixed4 col = fixed4(_Color.rgb, 1 - ( (pow(2.0*((i.uv.x - 0.5)), 2.0) + _OuterMultiplier) * lerp(0.75, 1, 0.5*(_CosTime.w + 1))));
 				return col;
 			}
 			ENDCG

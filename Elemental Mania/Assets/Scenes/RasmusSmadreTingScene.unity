@@ -1910,6 +1910,26 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 212966436685912700, guid: 1a074561045b349dfad97ab4d0c0edbe,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212966436685912700, guid: 1a074561045b349dfad97ab4d0c0edbe,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 199886554926746102, guid: 1a074561045b349dfad97ab4d0c0edbe,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 879353551
+      objectReference: {fileID: 0}
+    - target: {fileID: 199886554926746102, guid: 1a074561045b349dfad97ab4d0c0edbe,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a074561045b349dfad97ab4d0c0edbe, type: 2}
   m_IsPrefabAsset: 0
