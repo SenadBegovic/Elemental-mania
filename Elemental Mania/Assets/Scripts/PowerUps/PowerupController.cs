@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
+using UnityEngine.UI;
 
 public class PowerupController : MonoBehaviour {
     private int kPowerupLayer;
@@ -9,11 +11,18 @@ public class PowerupController : MonoBehaviour {
     private struct ActivePowerup
     {
         public PowerUpBase Powerup;
+        public GameObject UIElement;
         public float Timeout;
     }
 
     [SerializeField]
     private List<ActivePowerup> m_ActivePowerups;
+
+    [SerializeField]
+    private Transform kUINode;
+    [SerializeField]
+    private GameObject kIconPrefab;
+
     private float m_CurrentTime;
 
     private void Start()
@@ -37,6 +46,7 @@ public class PowerupController : MonoBehaviour {
             {
                 if(p.Timeout < m_CurrentTime)
                 {
+                    GameObject.Destroy(p.UIElement);
                     p.Powerup.Remove(gameObject);
                     return true;
                 }
@@ -68,6 +78,14 @@ public class PowerupController : MonoBehaviour {
         ActivePowerup activeSlot = new ActivePowerup();
         activeSlot.Powerup = powerup;
         activeSlot.Timeout = m_CurrentTime + powerup.Duration;
+        GameObject uiNode = GameObject.Instantiate(kIconPrefab, kUINode);
+        Image image = uiNode.GetComponent<Image>();
+        Assert.IsNotNull(image);
+        image.sprite = powerup.kSprite;
+
+        activeSlot.UIElement = uiNode;
+
+        // Must be done last - ActivePowerup is a struct!
         m_ActivePowerups.Add(activeSlot);
     }
 

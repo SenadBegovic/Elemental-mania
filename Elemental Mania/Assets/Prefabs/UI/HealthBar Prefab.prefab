@@ -267,8 +267,7 @@ MonoBehaviour:
   ImgHealthBar: {fileID: 114714062812605230}
   ImgShieldBar: {fileID: 114108929481292494}
   TxtHealth: {fileID: 114524564460560332}
-  Min: 0
-  Max: 100
+  player: {fileID: 0}
 --- !u!222 &222111646410744420
 CanvasRenderer:
   m_ObjectHideFlags: 1
