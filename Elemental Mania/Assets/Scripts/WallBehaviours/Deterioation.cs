@@ -19,9 +19,10 @@ public class Deterioation : MonoBehaviour
     public void Update()
     {
         m_TimeSinceLastDeterioation += Time.deltaTime;
-        if (m_TimeSinceLastDeterioation <= 0.5)
+        if (m_TimeSinceLastDeterioation >= 1.0)
         {
             m_Health.TakeDamage(kDeterioationRate);
+            m_TimeSinceLastDeterioation = 0;
         }
     }
 }
