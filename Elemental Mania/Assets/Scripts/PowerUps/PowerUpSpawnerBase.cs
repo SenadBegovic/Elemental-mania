@@ -29,6 +29,10 @@ public class PowerUpSpawnerBase : MonoBehaviour
         {
             Respawn();
         }
+        else
+        {
+            Display();
+        }
     }
 
 
@@ -49,9 +53,14 @@ public class PowerUpSpawnerBase : MonoBehaviour
     protected virtual void Respawn()
     {
         m_CurrentEffect = m_EffectsPool[Random.Range(0, m_EffectsPool.Length - 1)];
+        Display();
+    }
+
+    protected virtual void Display()
+    {
         m_Collider.enabled = true;
         m_Renderer.enabled = true;
-        m_Renderer.color = m_CurrentEffect.GetColor();
+        m_Renderer.sprite = m_CurrentEffect.kSprite;
     }
 
     protected virtual void Expire()

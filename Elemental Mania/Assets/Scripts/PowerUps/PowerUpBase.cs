@@ -33,6 +33,9 @@ public abstract class PowerUpBase : ScriptableObject {
     [SerializeField]
     protected float kDuration;
 
+    [SerializeField]
+    public Sprite kSprite;
+
     public float Duration
     {
         get
