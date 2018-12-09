@@ -16,20 +16,24 @@ public class FollowScript : MonoBehaviour
 
     void LateUpdate()
     {
-        if (Time.timeScale == 1)
+        if (player2 == null || m_OrthographicCamera == null)
         {
-            if (player2 == null || m_OrthographicCamera == null)
-            {
-                setPosition = transform.position;
-                setPosition.x = player1.transform.position.x;
-                setPosition.y = player1.transform.position.y;
-                transform.position = setPosition;
-            }
-            else
-            {
-                SetCameraPos();
-                SetCameraSize();
-            }
+            setPosition = transform.position;
+            setPosition.x = player1.transform.position.x;
+            setPosition.y = player1.transform.position.y;
+            transform.position = setPosition;
+        }
+        else if (player1 == null || m_OrthographicCamera == null)
+        {
+            setPosition = transform.position;
+            setPosition.x = player2.transform.position.x;
+            setPosition.y = player2.transform.position.y;
+            transform.position = setPosition;
+        }
+        else
+        {
+            SetCameraPos();
+            SetCameraSize();
         }
     }
 
@@ -49,7 +53,7 @@ public class FollowScript : MonoBehaviour
         m_OrthographicCamera.orthographic = true;
         float minSizeX = minSizeY * Screen.width / Screen.height;
         float width = (Mathf.Abs(player1.position.x - player2.position.x) * 0.5f) + 2f;
-        float height = Mathf.Abs(player1.position.y - player2.position.y) * 0.5f;
+        float height = Mathf.Abs(player1.position.y - player2.position.y) * 0.5f + 2f;
         float camSizeX = Mathf.Max(width, minSizeX);
         m_OrthographicCamera.orthographicSize = Mathf.Max(height,
             camSizeX * Screen.height / Screen.width, minSizeY);
