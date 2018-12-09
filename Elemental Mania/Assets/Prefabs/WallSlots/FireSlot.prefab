@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 61859846958792018}
   m_Layer: 12
   m_Name: FireSlot
-  m_TagString: Untagged
+  m_TagString: WallSlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,6 +12,8 @@ public class PowerupResistance : PowerUpBase
         EffectiveHealth hp = multi.GetComponent<EffectiveHealth>();
         hp.m_Resistance.Earth += kResistanceBoost;
         hp.m_Resistance.Fire += kResistanceBoost;
+        hp.m_Resistance.Frost += kResistanceBoost;
+        hp.m_Resistance.Wind += kResistanceBoost;
     }
 
     public override Color GetColor()
@@ -24,5 +26,7 @@ public class PowerupResistance : PowerUpBase
         EffectiveHealth hp = multi.GetComponent<EffectiveHealth>();
         hp.m_Resistance.Earth -= kResistanceBoost;
         hp.m_Resistance.Fire -= kResistanceBoost;
+        hp.m_Resistance.Frost -= kResistanceBoost;
+        hp.m_Resistance.Wind -= kResistanceBoost;
     }
 }

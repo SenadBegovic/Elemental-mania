@@ -2,24 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Deployable", menuName = "WallSettings")]
-public class Deployable : ScriptableObject
+[System.Serializable]
+public struct Deployable
 {
-    [SerializeField]
-    private GameObject kWallPrefab;
-
-    public GameObject Prefab {
-        get {
-            return kWallPrefab;
-        }
-    }
-
-    [SerializeField]
-    private int kStartingHealth;
-
-    public int StartingHealth {
-        get {
-            return kStartingHealth;
-        }
-    }
+    public GameObject Prefab;
+    public int StartingHealth;
 }

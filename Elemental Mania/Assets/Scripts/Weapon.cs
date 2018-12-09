@@ -14,13 +14,6 @@ public class Weapon : MonoBehaviour {
     private ParticleSystem m_Emitter;
     private float CoolingPeriod;
 
-    [System.Serializable]
-    struct Deployable
-    {
-        public GameObject Prefab;
-        public int StartingHealth;
-    }
-
     [SerializeField]
     private Deployable kDeployableSettings;
 
