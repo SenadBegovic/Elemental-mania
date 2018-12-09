@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 61274853973500772}
   m_Layer: 12
   m_Name: EarthSlot
-  m_TagString: Untagged
+  m_TagString: WallSlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

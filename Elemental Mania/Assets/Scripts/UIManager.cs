@@ -39,7 +39,7 @@ public class UIManager : MonoBehaviour
                 }
 
                 Time.timeScale = 0;
-                WinScreen("Player Two");
+                WinScreen("Player 2");
             }
 
             if (player2.CurrentHealth <= 0)
@@ -50,7 +50,7 @@ public class UIManager : MonoBehaviour
                 }
 
                 Time.timeScale = 0;
-                WinScreen("Player One");
+                WinScreen("Player 1");
             }
         }
     }
@@ -58,7 +58,7 @@ public class UIManager : MonoBehaviour
     public void WinScreen(string winner)
     {
         showFinished();
-        text.text = string.Format("GAME OVER!\n{0} WON!", winner);
+        text.text = string.Format("GAME OVER!\n{0} WINS!", winner);
     }
 
     public void showFinished()

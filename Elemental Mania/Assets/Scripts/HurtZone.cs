@@ -29,7 +29,7 @@ public class HurtZone : MonoBehaviour {
             EffectiveHealth health = collision.gameObject.GetComponent<EffectiveHealth>();
             if(health != null)
             {
-                health.TakeDamage(kDamagePerSecond);       
+                health.TakeDamage(kDamagePerSecond, ElementalType.FIRE);       
             }
         }
     }
