@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider2D), typeof(EffectiveHealth))]
+[RequireComponent(typeof(Collider2D))]
 public class HurtZone : MonoBehaviour {
     
     [SerializeField]
