@@ -8,10 +8,15 @@ public class EffectiveHealth : MonoBehaviour {
     private int m_Health;
     [SerializeField]
     private int kStartingHealth;
+    private SpriteRenderer kSpriteRenderer;
+
     private int m_Damage;
 
     [SerializeField]
     private int m_MaxHealth;
+
+    private bool m_TookDamage;
+    private float m_HurtFadeTimer;
 
     [SerializeField]
     public Resistance m_Resistance;
@@ -35,6 +40,8 @@ public class EffectiveHealth : MonoBehaviour {
     {
         int newHealth = m_Health - amount;
         m_Health = Mathf.Clamp(newHealth, 0, m_MaxHealth);
+        if(m_Health > 0)
+            m_TookDamage = true;
     }
 
     public float HealthPercentage{
@@ -58,7 +65,37 @@ public class EffectiveHealth : MonoBehaviour {
         TakeDamage(m_Damage);
     }
 
+    void Update()
+    {
+        if(m_TookDamage)
+        {
+            // If our hurt timer is greater then zero, then we are still in the "damaged" display state
+            if(m_HurtFadeTimer > 0)
+            {
+                m_HurtFadeTimer -= Time.deltaTime;
+                // We have waited long enough to not show hurt anymore (reset color)
+                if(m_HurtFadeTimer <= 0)
+                {
+                    Color color = kSpriteRenderer.color;
+                    color.r -= 0.5f;
+                    kSpriteRenderer.color = color;
+                    m_TookDamage = false;
+                }
+            }
+            else
+            {
+                Color color = kSpriteRenderer.color;
+                color.r += 0.5f;
+                kSpriteRenderer.color = color;
+                m_HurtFadeTimer = 0.5f;
+            }
+        }
+    }
+
 	void Start () {
         m_Health = kStartingHealth;
+        m_TookDamage = false;
+        kSpriteRenderer = GetComponent<SpriteRenderer>();
+
 	}
 }
