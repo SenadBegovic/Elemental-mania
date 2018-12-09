@@ -8,6 +8,7 @@ TagManager:
   - PlayerTwo
   - PlayerLocator
   - WallSlot
+  - ShowOnFinish
   layers:
   - Default
   - TransparentFX

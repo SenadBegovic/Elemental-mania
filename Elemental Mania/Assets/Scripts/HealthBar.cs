@@ -13,7 +13,7 @@ public class HealthBar : MonoBehaviour {
     private int mCurrentValue;
     private float mCurrentPercentage;
 
-    void Start () { 
+    void Start () {
         SetHealth(player.CurrentHealth);
         
 	}
@@ -26,14 +26,14 @@ public class HealthBar : MonoBehaviour {
 
     public void SetHealth(int health)
     {
-        if(health > player.MaxHealth * 2)
+        if(health > player.MaxHealth)
         {
-            health = 200;
+            health = player.MaxHealth;
         }
 
-        if (health > player.MaxHealth)
+        if (health > player.MaxHealth / 2)
         {
-            SetShield(health - player.MaxHealth);
+            SetShield(health - player.MaxHealth / 2);
         }
         else
         {
@@ -50,7 +50,7 @@ public class HealthBar : MonoBehaviour {
             else
             {
                 mCurrentValue = health;
-                mCurrentPercentage = (float)mCurrentValue / (float)(player.MaxHealth); 
+                mCurrentPercentage = (float)mCurrentValue / (float)(player.MaxHealth / 2); 
             }
 
             TxtHealth.text = string.Format("{0} %", Mathf.RoundToInt(mCurrentPercentage * 100));
@@ -62,7 +62,7 @@ public class HealthBar : MonoBehaviour {
     {
         {
         mCurrentValue = health;
-        mCurrentPercentage = (float)mCurrentValue / (float)(player.MaxHealth);
+        mCurrentPercentage = (float)mCurrentValue / (float)(player.MaxHealth / 2);
         }
 
     ImgShieldBar.fillAmount = mCurrentPercentage;

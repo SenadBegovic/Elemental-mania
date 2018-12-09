@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class FollowScript : MonoBehaviour
@@ -15,19 +16,26 @@ public class FollowScript : MonoBehaviour
 
     void LateUpdate()
     {
-        if (player2 == null || m_OrthographicCamera == null) {
-            setPosition = transform.position;
-            setPosition.x = player1.transform.position.x;
-            setPosition.y = player1.transform.position.y;
-            transform.position = setPosition;
-        } else {
-            SetCameraPos();
-            SetCameraSize();
+        if (Time.timeScale == 1)
+        {
+            if (player2 == null || m_OrthographicCamera == null)
+            {
+                setPosition = transform.position;
+                setPosition.x = player1.transform.position.x;
+                setPosition.y = player1.transform.position.y;
+                transform.position = setPosition;
+            }
+            else
+            {
+                SetCameraPos();
+                SetCameraSize();
+            }
         }
     }
 
     void SetCameraPos()
     {
+        
         Vector3 middle = (player1.transform.position + player2.transform.position) * 0.5f;
         transform.position = new Vector3(
             middle.x,

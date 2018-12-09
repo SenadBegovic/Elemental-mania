@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kDuration: 15
   kSprite: {fileID: 21300004, guid: 6e1c9e2b753c0ac41b77f47ca32f436b, type: 3}
-  kResistanceBoost: 35
+  kResistanceBoost: 0.35
