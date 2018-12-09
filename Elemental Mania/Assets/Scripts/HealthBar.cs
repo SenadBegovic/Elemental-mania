@@ -51,7 +51,7 @@ public class HealthBar : MonoBehaviour {
             {
                 mCurrentValue = health;
                 mCurrentPercentage = (float)mCurrentValue / (float)(player.MaxHealth / 2);
-  
+               
             }
 
             TxtHealth.text = string.Format("{0} %", Mathf.RoundToInt(mCurrentPercentage  * 100));
