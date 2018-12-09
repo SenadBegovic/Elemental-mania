@@ -2619,6 +2619,16 @@ Prefab:
       value: 
       objectReference: {fileID: 1083139950881600, guid: 12130090f078ffd49ab22340a0058fa5,
         type: 2}
+    - target: {fileID: 114283757280878766, guid: e19752954c9fbbc4c9267b5918bbbe82,
+        type: 2}
+      propertyPath: kStartingHealth
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 114283757280878766, guid: e19752954c9fbbc4c9267b5918bbbe82,
+        type: 2}
+      propertyPath: m_Health
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e19752954c9fbbc4c9267b5918bbbe82, type: 2}
   m_IsPrefabAsset: 0
