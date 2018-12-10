@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 114978034260967178}
   - component: {fileID: 114152303004323686}
   - component: {fileID: 68997400955125638}
+  - component: {fileID: 114491537364134992}
   m_Layer: 10
   m_Name: Fire
   m_TagString: Untagged
@@ -117,7 +118,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1406215244002460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.7907326, y: -0.23070624, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4174836307144940}
@@ -235,6 +236,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kHealth: {fileID: 114978034260967178}
+--- !u!114 &114491537364134992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1600565821443936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f2d72e41b254a0ea6b5eac182ac847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kDeterioationRate: 2
 --- !u!114 &114705660450403058
 MonoBehaviour:
   m_ObjectHideFlags: 1
