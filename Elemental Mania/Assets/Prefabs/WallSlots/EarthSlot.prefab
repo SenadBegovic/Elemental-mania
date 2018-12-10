@@ -88,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1807231201142510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.936915, y: -0.97524774, z: 2.43}
+  m_LocalPosition: {x: 1.2142923, y: -0.48547852, z: 2.43}
   m_LocalScale: {x: 1, y: 4.05, z: 1}
   m_Children:
   - {fileID: 4348671240414530}
@@ -208,14 +208,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d470cfbbd6a44055b23113161c6689e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Health: 150
+  m_Health: 75
   kStartingHealth: 75
   m_MaxHealth: 300
   m_Resistance:
-    Fire: 0.519
-    Frost: 0.519
-    Wind: 0.519
-    Earth: 0.496
+    Fire: 0.35
+    Frost: 0.2
+    Wind: 0.5
+    Earth: 1.15
 --- !u!114 &114202876285221200
 MonoBehaviour:
   m_ObjectHideFlags: 1
