@@ -14,8 +14,7 @@ public class PowerupHealth : PowerUpBase
         if (PlayerLocator.instance.IsPlayer(obj))
         {
             EffectiveHealth health = obj.GetComponent<EffectiveHealth>();
-            health.CurrentHealth += kHealthBoost;
-
+            health.Heal(kHealthBoost);
         }
     }
 
