@@ -1778,105 +1778,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 198475582655222076, guid: e19752954c9fbbc4c9267b5918bbbe82,
-        type: 2}
-      propertyPath: CollisionModule.collidesWith.m_Bits
-      value: 27959
-      objectReference: {fileID: 0}
-    - target: {fileID: 198377119169569880, guid: e19752954c9fbbc4c9267b5918bbbe82,
-        type: 2}
-      propertyPath: CollisionModule.collidesWith.m_Bits
-      value: 27959
-      objectReference: {fileID: 0}
-    - target: {fileID: 198221298515273364, guid: e19752954c9fbbc4c9267b5918bbbe82,
-        type: 2}
-      propertyPath: CollisionModule.collidesWith.m_Bits
-      value: 27959
-      objectReference: {fileID: 0}
-    - target: {fileID: 198121489563958024, guid: e19752954c9fbbc4c9267b5918bbbe82,
-        type: 2}
-      propertyPath: CollisionModule.collidesWith.m_Bits
-      value: 27959
-      objectReference: {fileID: 0}
     - target: {fileID: 114966844918606600, guid: e19752954c9fbbc4c9267b5918bbbe82,
         type: 2}
       propertyPath: kUINode
       value: 
       objectReference: {fileID: 1031125919}
-    - target: {fileID: 114966844918606600, guid: e19752954c9fbbc4c9267b5918bbbe82,
-        type: 2}
-      propertyPath: kIconPrefab
-      value: 
-      objectReference: {fileID: 1083139950881600, guid: 12130090f078ffd49ab22340a0058fa5,
-        type: 2}
-    - target: {fileID: 1007954665919436, guid: e19752954c9fbbc4c9267b5918bbbe82, type: 2}
-      propertyPath: m_TagString
-      value: PlayerOne
-      objectReference: {fileID: 0}
-    - target: {fileID: 114939884752192068, guid: e19752954c9fbbc4c9267b5918bbbe82,
-        type: 2}
-      propertyPath: kInputMapping
-      value: 
-      objectReference: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806,
-        type: 2}
-    - target: {fileID: 114795483399508732, guid: e19752954c9fbbc4c9267b5918bbbe82,
-        type: 2}
-      propertyPath: kInputMapping
-      value: 
-      objectReference: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806,
-        type: 2}
-    - target: {fileID: 114978913113032080, guid: e19752954c9fbbc4c9267b5918bbbe82,
-        type: 2}
-      propertyPath: kInputMapping
-      value: 
-      objectReference: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806,
-        type: 2}
-    - target: {fileID: 114756029556448042, guid: e19752954c9fbbc4c9267b5918bbbe82,
-        type: 2}
-      propertyPath: kInputMapping
-      value: 
-      objectReference: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806,
-        type: 2}
-    - target: {fileID: 114630168001122204, guid: e19752954c9fbbc4c9267b5918bbbe82,
-        type: 2}
-      propertyPath: kInputMapping
-      value: 
-      objectReference: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806,
-        type: 2}
-    - target: {fileID: 114393652035959678, guid: e19752954c9fbbc4c9267b5918bbbe82,
-        type: 2}
-      propertyPath: kInputMapping
-      value: 
-      objectReference: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806,
-        type: 2}
-    - target: {fileID: 212801571039097408, guid: e19752954c9fbbc4c9267b5918bbbe82,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 741803811e350a44c965f886f13c684e,
-        type: 3}
-    - target: {fileID: 212801571039097408, guid: e19752954c9fbbc4c9267b5918bbbe82,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 0.16032147
-      objectReference: {fileID: 0}
-    - target: {fileID: 212801571039097408, guid: e19752954c9fbbc4c9267b5918bbbe82,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 0.1514774
-      objectReference: {fileID: 0}
-    - target: {fileID: 212801571039097408, guid: e19752954c9fbbc4c9267b5918bbbe82,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 0.8679245
-      objectReference: {fileID: 0}
-    - target: {fileID: 50933160046622586, guid: e19752954c9fbbc4c9267b5918bbbe82,
-        type: 2}
-      propertyPath: m_SleepingMode
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114094041788301324, guid: e19752954c9fbbc4c9267b5918bbbe82, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e19752954c9fbbc4c9267b5918bbbe82, type: 2}
   m_IsPrefabAsset: 0
 --- !u!114 &1107144354 stripped
@@ -2577,8 +2484,7 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: cb49f106427c243298f07b915344afd6,
         type: 2}
-    - target: {fileID: 114094041788301324, guid: e19752954c9fbbc4c9267b5918bbbe82,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: kHealth
       value: 
       objectReference: {fileID: 1976223093}
@@ -2673,7 +2579,7 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114094041788301324, guid: e19752954c9fbbc4c9267b5918bbbe82, type: 2}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: e19752954c9fbbc4c9267b5918bbbe82, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1863724412

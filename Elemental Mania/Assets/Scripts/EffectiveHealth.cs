@@ -40,7 +40,7 @@ public class EffectiveHealth : MonoBehaviour {
     {
         int newHealth = m_Health - amount;
         m_Health = Mathf.Clamp(newHealth, 0, m_MaxHealth);
-        if(m_Health > 0)
+        if(m_Health > 0 && amount > 0)
             m_TookDamage = true;
     }
 

@@ -159,7 +159,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1824794286283822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.249638, y: -0.64969015, z: 2.43}
+  m_LocalPosition: {x: -3.5216053, y: -0.7241589, z: 2.43}
   m_LocalScale: {x: 1, y: 4.05, z: 1}
   m_Children:
   - {fileID: 4493807720420738}
@@ -247,10 +247,10 @@ MonoBehaviour:
   kStartingHealth: 50
   m_MaxHealth: 200
   m_Resistance:
-    Fire: 0.544
-    Frost: 0.544
-    Wind: 0.544
-    Earth: 1.5
+    Fire: 0.5
+    Frost: 0.35
+    Wind: 1.25
+    Earth: 0.2
 --- !u!114 &114592046408395384
 MonoBehaviour:
   m_ObjectHideFlags: 1
