@@ -1875,6 +1875,16 @@ Prefab:
       propertyPath: m_SleepingMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114283757280878766, guid: e19752954c9fbbc4c9267b5918bbbe82,
+        type: 2}
+      propertyPath: kStartingHealth
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 114283757280878766, guid: e19752954c9fbbc4c9267b5918bbbe82,
+        type: 2}
+      propertyPath: m_Health
+      value: 600
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114094041788301324, guid: e19752954c9fbbc4c9267b5918bbbe82, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e19752954c9fbbc4c9267b5918bbbe82, type: 2}
@@ -2671,6 +2681,16 @@ Prefab:
         type: 2}
       propertyPath: m_SleepingMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114283757280878766, guid: e19752954c9fbbc4c9267b5918bbbe82,
+        type: 2}
+      propertyPath: kStartingHealth
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 114283757280878766, guid: e19752954c9fbbc4c9267b5918bbbe82,
+        type: 2}
+      propertyPath: m_Health
+      value: 600
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114094041788301324, guid: e19752954c9fbbc4c9267b5918bbbe82, type: 2}
