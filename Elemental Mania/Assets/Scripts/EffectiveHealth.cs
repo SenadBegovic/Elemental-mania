@@ -65,6 +65,19 @@ public class EffectiveHealth : MonoBehaviour {
         TakeDamage(m_Damage);
     }
 
+    public void Heal(int amount)
+    {
+        int newHealth = m_Health + amount;
+        if(newHealth > m_MaxHealth)
+        {
+            m_Health = m_MaxHealth;
+        }
+        else
+        {
+            m_Health = newHealth;
+        }
+    }
+
     void Update()
     {
         if(m_TookDamage)
