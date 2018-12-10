@@ -25,7 +25,10 @@ public class UIManager : MonoBehaviour
         hideFinished();
 
     }
+    void start()
+    {
 
+    }
 
     void Update()
     {
@@ -79,8 +82,8 @@ public class UIManager : MonoBehaviour
 
     public void Reload()
     {
-        Application.LoadLevel(Application.loadedLevel);
         Time.timeScale = 1;
+        Application.LoadLevel(Application.loadedLevel);
     }
 
     public void LoadLevel(string level)

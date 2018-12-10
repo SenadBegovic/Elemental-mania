@@ -42,7 +42,7 @@ public class HealthBar : MonoBehaviour {
 
         if(health != mCurrentValue)
         {
-            if(player.CurrentHealth == 0)
+            if(player.CurrentHealth <= 0)
             {
                 mCurrentValue = 0;
                 mCurrentPercentage = 0;
@@ -50,10 +50,11 @@ public class HealthBar : MonoBehaviour {
             else
             {
                 mCurrentValue = health;
-                mCurrentPercentage = (float)mCurrentValue / (float)(player.MaxHealth / 2); 
+                mCurrentPercentage = (float)mCurrentValue / (float)(player.MaxHealth / 2);
+               
             }
 
-            TxtHealth.text = string.Format("{0} %", Mathf.RoundToInt(mCurrentPercentage * 100));
+            TxtHealth.text = string.Format("{0} %", Mathf.RoundToInt(mCurrentPercentage  * 100));
             ImgHealthBar.fillAmount = mCurrentPercentage;
         }
     }
