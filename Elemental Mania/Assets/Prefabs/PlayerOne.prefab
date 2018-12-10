@@ -30,7 +30,7 @@ GameObject:
   - component: {fileID: 114094041788301324}
   m_Layer: 13
   m_Name: PlayerOne
-  m_TagString: PlayerTwo
+  m_TagString: PlayerOne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -275,7 +275,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1007954665919436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.62, y: -1.8, z: -10.01393}
+  m_LocalPosition: {x: -8.31, y: -1.8, z: -10.01393}
   m_LocalScale: {x: 0.75, y: 1, z: 1}
   m_Children:
   - {fileID: 4042231084969288}
@@ -315,7 +315,7 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!70 &70725010021607328
@@ -380,7 +380,7 @@ MonoBehaviour:
     m_BaseValue: 5
   kType: 0
   kCooldown: 1
-  kInputMapping: {fileID: 11400000, guid: cb49f106427c243298f07b915344afd6, type: 2}
+  kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
   kDeployableSettings:
     Prefab: {fileID: 1978077305258822, guid: 3abee2e7b68754cb6b86c17905d03ab4, type: 2}
     StartingHealth: 10
@@ -413,7 +413,7 @@ MonoBehaviour:
     m_BaseValue: 150
   kType: 0
   kCooldown: 4
-  kInputMapping: {fileID: 11400000, guid: cb49f106427c243298f07b915344afd6, type: 2}
+  kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
   kDeployableSettings:
     Prefab: {fileID: 1936736645133010, guid: 720515f362ae14d5f903f25dfac20a08, type: 2}
     StartingHealth: 100
@@ -435,7 +435,7 @@ MonoBehaviour:
     m_BaseValue: 1
   kType: 2
   kCooldown: 1
-  kInputMapping: {fileID: 11400000, guid: cb49f106427c243298f07b915344afd6, type: 2}
+  kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
   kDeployableSettings:
     Prefab: {fileID: 1267443839184982, guid: 283d6d12de5d94c939b4e94a87b8e20b, type: 2}
     StartingHealth: 100
@@ -457,7 +457,7 @@ MonoBehaviour:
   - {fileID: 114756029556448042}
   - {fileID: 114630168001122204}
   - {fileID: 114393652035959678}
-  kInputMapping: {fileID: 11400000, guid: cb49f106427c243298f07b915344afd6, type: 2}
+  kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
 --- !u!114 &114939884752192068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -481,7 +481,7 @@ MonoBehaviour:
   kGroundLayer:
     serializedVersion: 2
     m_Bits: 16640
-  kInputMapping: {fileID: 11400000, guid: cb49f106427c243298f07b915344afd6, type: 2}
+  kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
 --- !u!114 &114966844918606600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -513,7 +513,7 @@ MonoBehaviour:
     m_BaseValue: 3
   kType: 1
   kCooldown: 0
-  kInputMapping: {fileID: 11400000, guid: cb49f106427c243298f07b915344afd6, type: 2}
+  kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
   kDeployableSettings:
     Prefab: {fileID: 1752659126221834, guid: 1a074561045b349dfad97ab4d0c0edbe, type: 2}
     StartingHealth: 100
@@ -19184,8 +19184,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c31435e4afd214f40b9447d8994b5e61, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 50b4532ab82bca24f8bac43f74a776a3, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 1
   m_DrawMode: 0
