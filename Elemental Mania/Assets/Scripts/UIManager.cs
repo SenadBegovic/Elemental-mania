@@ -26,10 +26,6 @@ public class UIManager : MonoBehaviour
         hideFinished();
 
     }
-    void start()
-    {
-
-    }
 
     void Update()
     {

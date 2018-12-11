@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RasmusSmadreTingScene.unity
     guid: f4ac3321635b2294cbd087c0fc1c9973
+  - enabled: 1
+    path: Assets/Scenes/TutorialScene.unity
+    guid: 2e43cc8f39f09b245b41089077646d5f
   m_configObjects: {}
