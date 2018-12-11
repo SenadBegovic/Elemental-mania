@@ -4,15 +4,16 @@ using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
 public class HurtZone : MonoBehaviour {
-    
     [SerializeField]
-    private int kDamagePerSecond;
+    int kMaxDamage;
 
     private float m_NextDamageTimer;
+    private Collider2D m_Trigger;
 
     private void Start()
     {
         m_NextDamageTimer = 0;
+        m_Trigger = GetComponent<Collider2D>();
     }
 
     private void FixedUpdate()
@@ -29,7 +30,13 @@ public class HurtZone : MonoBehaviour {
             EffectiveHealth health = collision.gameObject.GetComponent<EffectiveHealth>();
             if(health != null)
             {
-                health.TakeDamage(kDamagePerSecond, ElementalType.FIRE);       
+                // We are only interested in horizontal distance
+                float distance = Mathf.Abs(collision.transform.position.x - transform.position.x);
+                float range = collision.bounds.extents.x * gameObject.transform.lossyScale.x; 
+                // The closer we are to the collider center, the more damage we should take
+                float distanceRatio = Mathf.Clamp(1 - distance / range, 0, float.MaxValue);
+                float damage = distanceRatio * kMaxDamage;
+                health.TakeDamage((int)damage, ElementalType.FIRE);
             }
         }
     }
