@@ -344,7 +344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Health: 300
-  kStartingHealth: 300
+  kStartingHealth: 600
   m_MaxHealth: 600
   m_Resistance:
     Fire: 0
@@ -419,7 +419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage:
     m_Multiplier: 1
-    m_BaseValue: 2
+    m_BaseValue: 4
   kType: 2
   kCooldown: 1
   kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
