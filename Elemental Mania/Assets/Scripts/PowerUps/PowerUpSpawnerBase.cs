@@ -18,6 +18,8 @@ public class PowerUpSpawnerBase : MonoBehaviour
 
     [SerializeField]
     private float kRespawnTime;
+    [SerializeField]
+    private float kInitSpawnTime;
 
     private float TimeToRespawn;
 
@@ -25,13 +27,18 @@ public class PowerUpSpawnerBase : MonoBehaviour
     {
         m_Renderer = GetComponent<SpriteRenderer>();
         m_Collider = GetComponent<Collider2D>();
-        if (m_CurrentEffect == null)
+        if (m_CurrentEffect == null && kInitSpawnTime == 0)
         {
             Respawn();
         }
-        else
+        else if(m_CurrentEffect!= null)
         {
             Display();
+        }
+        else
+        {
+            Expire();
+            TimeToRespawn = kInitSpawnTime;
         }
     }
 
