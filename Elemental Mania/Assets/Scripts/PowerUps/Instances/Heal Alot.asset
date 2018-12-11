@@ -8,9 +8,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d4fbe7bfef4eaa4085dd057c3bb3189, type: 3}
+  m_Script: {fileID: 11500000, guid: a72e0bcd0cdb861458bc5cfdd3141074, type: 3}
   m_Name: Heal Alot
   m_EditorClassIdentifier: 
   kDuration: 0
   kSprite: {fileID: 21300000, guid: ac0f52f9a90ca614ea3ab61b3f35ded6, type: 3}
-  kHealthBoost: 300
+  m_OverHeal: 300
