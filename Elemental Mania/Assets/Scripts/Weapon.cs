@@ -13,6 +13,7 @@ public class Weapon : MonoBehaviour {
     private InputMapping kInputMapping;
     private ParticleSystem m_Emitter;
     private float CoolingPeriod;
+    private WeaponController weapon;
 
     [SerializeField]
     private Deployable kDeployableSettings;
@@ -34,7 +35,7 @@ public class Weapon : MonoBehaviour {
 
     // Use this for initialization
     protected void Start () {
-        CoolingPeriod = float.MaxValue * 0.5f;
+        CoolingPeriod = kCooldown;
         m_Emitter = GetComponent<ParticleSystem>();
         Assert.IsTrue(m_Emitter.collision.enabled, "Must have an emitter with collisions enabled");
 
@@ -46,6 +47,7 @@ public class Weapon : MonoBehaviour {
 	
 	// Update is called once per frame
 	protected void Update () {
+       
         CoolingPeriod += Time.deltaTime;
 
         if (Input.GetButtonDown(kInputMapping.kPrimaryFire))
@@ -87,6 +89,11 @@ public class Weapon : MonoBehaviour {
 
             }
         }
+    }
+
+    private void OnEnable()
+    {
+        CoolingPeriod = kCooldown;
     }
 
     private void HealWall(Transform locationTransform)
