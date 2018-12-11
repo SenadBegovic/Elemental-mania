@@ -95,7 +95,7 @@ public class EffectiveHealth : MonoBehaviour {
                     m_TookDamage = false;
                 }
             }
-            else
+            else if(kSpriteRenderer != null)
             {
                 Color color = kSpriteRenderer.color;
                 color.r += 0.5f;
