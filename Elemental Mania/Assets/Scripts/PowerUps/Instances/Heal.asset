@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Name: Heal
   m_EditorClassIdentifier: 
   kDuration: 0
-  kHealthBoost: 35
+  kSprite: {fileID: 0}
+  kHealthBoost: 60
