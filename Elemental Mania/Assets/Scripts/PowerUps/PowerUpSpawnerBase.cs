@@ -59,7 +59,7 @@ public class PowerUpSpawnerBase : MonoBehaviour
 
     protected virtual void Respawn()
     {
-        m_CurrentEffect = m_EffectsPool[Random.Range(0, m_EffectsPool.Length - 1)];
+        m_CurrentEffect = m_EffectsPool[Random.Range(0, m_EffectsPool.Length)];
         Display();
     }
 

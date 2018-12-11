@@ -52,7 +52,7 @@ public class FollowScript : MonoBehaviour
     {
         m_OrthographicCamera.orthographic = true;
         float minSizeX = minSizeY * Screen.width / Screen.height;
-        float width = (Mathf.Abs(player1.position.x - player2.position.x) * 0.5f) + 2f;
+        float width = (Mathf.Abs(player1.position.x - player2.position.x) * 0.5f) + 3f;
         float height = Mathf.Abs(player1.position.y - player2.position.y) * 0.5f + 3f;
         float camSizeX = Mathf.Max(width, minSizeX);
         m_OrthographicCamera.orthographicSize = Mathf.Max(height,

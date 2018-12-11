@@ -48,10 +48,25 @@ public class PlayerController : MonoBehaviour {
         kIsGrounded = Physics2D.OverlapCircle(kGroundCheck.position, kCheckRadius, kGroundLayer);
         kMoveInput = Input.GetAxis(kInputMapping.kHorizontalMovement);
         Vector2 currentVelocity = kRb.velocity;
-        if(kMoveInput != 0)
-            kRb.velocity = new Vector2(Mathf.Lerp(currentVelocity.x, kMoveInput * kSpeed.value, 0.25f), kRb.velocity.y);
+        float currentSpeed = Mathf.Abs(currentVelocity.x);
+        if(currentSpeed <= kSpeed.value)
+        {
+            if (kMoveInput != 0)
+                kRb.velocity = new Vector2(kMoveInput * kSpeed.value, kRb.velocity.y);
+        }
+        else
+        {
+            Vector2 breakPower = new Vector2(kMoveInput * kSpeed.value, 0);
+            Vector2 currentHorizontalVelocity = new Vector2(currentVelocity.x, 0);
+            float newVelocity = GetEstimatedVelocity(breakPower, currentHorizontalVelocity);
 
-        if(kFacingRight == false && kMoveInput > 0)
+            if(newVelocity < currentHorizontalVelocity.magnitude)
+            {
+                kRb.AddForce(breakPower);
+            }
+        }
+
+        if (kFacingRight == false && kMoveInput > 0)
         {
             Flip();
         } else if(kFacingRight == true && kMoveInput < 0)
@@ -59,6 +74,11 @@ public class PlayerController : MonoBehaviour {
             Flip();
         }
    }
+
+    float GetEstimatedVelocity(Vector2 force, Vector2 currentVelocity)
+    {
+        return (force.magnitude / kRb.mass)*Time.fixedDeltaTime + currentVelocity.magnitude;
+    }
 
     private void Flip()
     {

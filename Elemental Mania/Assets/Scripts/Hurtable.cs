@@ -35,7 +35,9 @@ public class Hurtable : MonoBehaviour {
             Vector3 directionPosition = transform.position + new Vector3(0, 0.25f, 0);
             Vector3 direction = (directionPosition - other.transform.position);
             Vector2 realDirection = new Vector2(direction.x, direction.y);
-            kRigidBody.AddForce(realDirection.normalized * 500, ForceMode2D.Force);
+            // Break vector is to make sure that wind at least breaks the player's movement
+            Vector2 breakVector = new Vector2(-kRigidBody.velocity.x, 0);
+            kRigidBody.AddForce(breakVector + realDirection.normalized * 8, ForceMode2D.Impulse);
         }
     }
 }
