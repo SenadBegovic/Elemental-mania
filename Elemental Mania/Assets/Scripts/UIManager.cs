@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         //text = GetComponent<Text>();
-
+        Time.timeScale = 1;
         playerOne = GameObject.FindGameObjectsWithTag("PlayerOne");
         playerTwo = GameObject.FindGameObjectsWithTag("PlayerTwo");
         finishObjects = GameObject.FindGameObjectsWithTag("ShowOnFinish");
@@ -82,8 +83,8 @@ public class UIManager : MonoBehaviour
 
     public void Reload()
     {
-        Time.timeScale = 1;
         Application.LoadLevel(Application.loadedLevel);
+        Time.timeScale = 1;
     }
 
     public void LoadLevel(string level)
