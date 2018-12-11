@@ -8,6 +8,7 @@ public class PowerUpDestructableSpawner : PowerUpSpawnerBase
     private EffectiveHealth kHealth;
 
     private GameObject m_LastDamageCommitter;
+    private bool m_Died;
 
     // Use this for initialization
     new void Start () {
@@ -18,7 +19,8 @@ public class PowerUpDestructableSpawner : PowerUpSpawnerBase
     protected override void Respawn()
     {
         base.Respawn();
-        kHealth.SetHealthPercentage(1);
+        kHealth.SetHealthPercentage(1.0f);
+        m_Died = false;
     }
 
     private void OnParticleCollision(GameObject other)
@@ -28,7 +30,7 @@ public class PowerUpDestructableSpawner : PowerUpSpawnerBase
 
     // Update is called once per frame
     new void Update () {
-        if(kHealth.CurrentHealth <= 0)
+        if(kHealth.CurrentHealth <= 0 && !m_Died)
         {
             if(m_LastDamageCommitter != null)
             {
@@ -38,6 +40,7 @@ public class PowerUpDestructableSpawner : PowerUpSpawnerBase
                 m_LastDamageCommitter = null;
             }
             Expire();
+            m_Died = true;
         }
         base.Update();
 	}

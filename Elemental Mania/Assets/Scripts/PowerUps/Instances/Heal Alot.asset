@@ -8,11 +8,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82dccb59605497c43be3dbb78bb98327, type: 3}
-  m_Name: Inferno
+  m_Script: {fileID: 11500000, guid: 8d4fbe7bfef4eaa4085dd057c3bb3189, type: 3}
+  m_Name: Heal Alot
   m_EditorClassIdentifier: 
-  kDuration: 30
+  kDuration: 0
   kSprite: {fileID: 21300000, guid: ac0f52f9a90ca614ea3ab61b3f35ded6, type: 3}
-  kDeployableSettings:
-    Prefab: {fileID: 1406215244002460, guid: 770738bda061145cba972a15991358d4, type: 2}
-    StartingHealth: 400
+  kHealthBoost: 300
