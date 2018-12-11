@@ -12,7 +12,7 @@ public class PowerupFire : PowerUpBase
     private Color kBrown = new Color(153, 102, 51);
     private GameObject[] kWallSlots;
 
-    private void Awake()
+    private void OnEnable()
     {
         kWallSlots = GameObject.FindGameObjectsWithTag("WallSlot");
         Assert.IsTrue(kWallSlots.Length > 0, "Level must contain wall slots.. Right?");
