@@ -343,8 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d470cfbbd6a44055b23113161c6689e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Health: 300
-  kStartingHealth: 600
+  m_Health: 600
   m_MaxHealth: 600
   m_Resistance:
     Fire: 0
@@ -369,7 +368,7 @@ MonoBehaviour:
   kCooldown: 1
   kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
   kDeployableSettings:
-    Prefab: {fileID: 1978077305258822, guid: 3abee2e7b68754cb6b86c17905d03ab4, type: 2}
+    Prefab: {fileID: 1449921184273826, guid: 54b891d41c5234c47a9eb43eaa46bfd7, type: 2}
     StartingHealth: 10
   kRepairRate: 10
   kDeployRange: 15
@@ -502,7 +501,7 @@ MonoBehaviour:
   kCooldown: 0
   kInputMapping: {fileID: 11400000, guid: f144882c7761c4628a72da0591070806, type: 2}
   kDeployableSettings:
-    Prefab: {fileID: 1752659126221834, guid: 1a074561045b349dfad97ab4d0c0edbe, type: 2}
+    Prefab: {fileID: 1484578392373318, guid: 770738bda061145cba972a15991358d4, type: 2}
     StartingHealth: 100
   kRepairRate: 10
   kDeployRange: 15

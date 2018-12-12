@@ -36,7 +36,7 @@ public class Weapon : MonoBehaviour {
     // Use this for initialization
     protected void Start () {
         CoolingPeriod = kCooldown;
-        m_Emitter = GetComponent<ParticleSystem>();
+        m_Emitter = GetComponent<ParticleSystem>(); 
         Assert.IsTrue(m_Emitter.collision.enabled, "Must have an emitter with collisions enabled");
 
         kRaycastMask = LayerMask.GetMask("WallSlot");

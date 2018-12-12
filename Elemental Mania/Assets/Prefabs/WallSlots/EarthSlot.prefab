@@ -209,7 +209,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Health: 75
-  kStartingHealth: 75
   m_MaxHealth: 300
   m_Resistance:
     Fire: 0.35
