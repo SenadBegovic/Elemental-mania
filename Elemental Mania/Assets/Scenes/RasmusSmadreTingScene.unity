@@ -2110,6 +2110,26 @@ Prefab:
       propertyPath: kUINode
       value: 
       objectReference: {fileID: 1031125919}
+    - target: {fileID: 114756029556448042, guid: e19752954c9fbbc4c9267b5918bbbe82,
+        type: 2}
+      propertyPath: kDeployRange
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114978913113032080, guid: e19752954c9fbbc4c9267b5918bbbe82,
+        type: 2}
+      propertyPath: kDeployRange
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114630168001122204, guid: e19752954c9fbbc4c9267b5918bbbe82,
+        type: 2}
+      propertyPath: kDeployRange
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114393652035959678, guid: e19752954c9fbbc4c9267b5918bbbe82,
+        type: 2}
+      propertyPath: kDeployRange
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e19752954c9fbbc4c9267b5918bbbe82, type: 2}
   m_IsPrefabAsset: 0

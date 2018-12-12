@@ -370,8 +370,8 @@ MonoBehaviour:
   kDeployableSettings:
     Prefab: {fileID: 1449921184273826, guid: 54b891d41c5234c47a9eb43eaa46bfd7, type: 2}
     StartingHealth: 10
-  kRepairRate: 10
-  kDeployRange: 15
+  kRepairRate: 4
+  kDeployRange: 4
 --- !u!114 &114489091075713996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -403,8 +403,8 @@ MonoBehaviour:
   kDeployableSettings:
     Prefab: {fileID: 1936736645133010, guid: 720515f362ae14d5f903f25dfac20a08, type: 2}
     StartingHealth: 100
-  kRepairRate: 10
-  kDeployRange: 15
+  kRepairRate: 4
+  kDeployRange: 4
 --- !u!114 &114756029556448042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -425,8 +425,8 @@ MonoBehaviour:
   kDeployableSettings:
     Prefab: {fileID: 1267443839184982, guid: 283d6d12de5d94c939b4e94a87b8e20b, type: 2}
     StartingHealth: 100
-  kRepairRate: 10
-  kDeployRange: 15
+  kRepairRate: 4
+  kDeployRange: 4
 --- !u!114 &114795483399508732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -503,8 +503,8 @@ MonoBehaviour:
   kDeployableSettings:
     Prefab: {fileID: 1484578392373318, guid: 770738bda061145cba972a15991358d4, type: 2}
     StartingHealth: 100
-  kRepairRate: 10
-  kDeployRange: 15
+  kRepairRate: 4
+  kDeployRange: 4
 --- !u!198 &198121489563958024
 ParticleSystem:
   m_ObjectHideFlags: 1
