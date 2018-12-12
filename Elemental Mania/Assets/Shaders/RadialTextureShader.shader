@@ -3,7 +3,8 @@
     Properties
     {
         _MyTexture("Gradient", 2D) = "white" {}
-        _Gradient("Radial", Range(0.00, 1.0)) = 0.5
+		_Gradient("Radial", Range(0.00, 1.0)) = 0.5
+		_Color("Color", Color) = (1, 0, 0, 1)
     }
     SubShader
     {
@@ -54,6 +55,7 @@
 
             sampler2D _MyTexture;
             float _Gradient;
+			fixed4 _Color;
 
             fixed4 frag (v2f i) : SV_Target
             {
@@ -61,7 +63,7 @@
                 half4 sample = tex2D(_MyTexture, i.uv);
                 if(sample.a > 1 - _Gradient)
                 {
-                    col = float4(float3(1, 0, 0) , 1.0);
+                    col = float4(_Color.xyz, 1.0);
                 }
                 else
                 {

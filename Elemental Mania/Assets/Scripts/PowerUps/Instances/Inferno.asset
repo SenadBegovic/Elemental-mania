@@ -14,5 +14,5 @@ MonoBehaviour:
   kDuration: 30
   kSprite: {fileID: 21300000, guid: ac0f52f9a90ca614ea3ab61b3f35ded6, type: 3}
   kDeployableSettings:
-    Prefab: {fileID: 1406215244002460, guid: 770738bda061145cba972a15991358d4, type: 2}
+    Prefab: {fileID: 1484578392373318, guid: 770738bda061145cba972a15991358d4, type: 2}
     StartingHealth: 400
