@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kDuration: 0
   kSprite: {fileID: 0}
-  kHealthBoost: 60
+  kHealthBoost: 45

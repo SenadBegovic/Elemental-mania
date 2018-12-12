@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1174420527302934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.65, y: 6.03, z: 0}
+  m_LocalPosition: {x: 8.95, y: -4.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,7 +73,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4e38ccb3a582f3143bdfa8a61a13c5a5, type: 2}
   - {fileID: 11400000, guid: 5daef04b5bbb1e74688b26761078084b, type: 2}
   m_CurrentEffect: {fileID: 0}
-  kRespawnTime: 30
+  kRespawnTime: 25
+  kInitSpawnTime: 0
   m_ShootEffect: {fileID: 11400000, guid: 1efd16550091db446a3b4a52d00f2943, type: 2}
 --- !u!212 &212493451624693000
 SpriteRenderer:

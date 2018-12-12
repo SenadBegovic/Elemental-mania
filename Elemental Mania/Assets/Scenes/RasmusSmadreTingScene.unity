@@ -1255,7 +1255,7 @@ Prefab:
     - target: {fileID: 114133813413130522, guid: 1f7f9b7cf965cdc4ebb9f7eb590b3e25,
         type: 2}
       propertyPath: m_EffectsPool.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4083305606965634, guid: 1f7f9b7cf965cdc4ebb9f7eb590b3e25, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1321,12 +1321,12 @@ Prefab:
     - target: {fileID: 114133813413130522, guid: 1f7f9b7cf965cdc4ebb9f7eb590b3e25,
         type: 2}
       propertyPath: kInitSpawnTime
-      value: 10
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 114133813413130522, guid: 1f7f9b7cf965cdc4ebb9f7eb590b3e25,
         type: 2}
       propertyPath: kRespawnTime
-      value: 1
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 114133813413130522, guid: 1f7f9b7cf965cdc4ebb9f7eb590b3e25,
         type: 2}
@@ -1338,7 +1338,7 @@ Prefab:
         type: 2}
       propertyPath: m_EffectsPool.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 98733f18fac1b8a48a87d5b3889b1a46,
+      objectReference: {fileID: 11400000, guid: f7b3b656fa909b44e9e7cb7093d09960,
         type: 2}
     - target: {fileID: 114133813413130522, guid: 1f7f9b7cf965cdc4ebb9f7eb590b3e25,
         type: 2}
