@@ -6,8 +6,6 @@ public class EffectiveHealth : MonoBehaviour {
 
     [SerializeField]
     private int m_Health;
-    [SerializeField]
-    private int kStartingHealth;
     private SpriteRenderer kSpriteRenderer;
 
     private int m_Damage;
@@ -106,7 +104,6 @@ public class EffectiveHealth : MonoBehaviour {
     }
 
 	void Start () {
-        m_Health = kStartingHealth;
         m_TookDamage = false;
         kSpriteRenderer = GetComponent<SpriteRenderer>();
 
