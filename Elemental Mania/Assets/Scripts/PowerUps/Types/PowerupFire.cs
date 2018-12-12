@@ -10,14 +10,6 @@ public class PowerupFire : PowerUpBase
     private Deployable kDeployableSettings;
 
     private Color kBrown = new Color(153, 102, 51);
-    private GameObject[] kWallSlots;
-
-    private void OnEnable()
-    {
-        kWallSlots = GameObject.FindGameObjectsWithTag("WallSlot");
-        Assert.IsTrue(kWallSlots.Length > 0, "Level must contain wall slots.. Right?");
-    }
-
 
     public override void Apply(GameObject player)
     {
@@ -28,10 +20,12 @@ public class PowerupFire : PowerUpBase
 
     void StartInferno()
     {
+        GameObject[]  wallSlots = GameObject.FindGameObjectsWithTag("WallSlot");
+
         // Cleanup all existing walls
-        for (int i = 0; i < kWallSlots.Length; i++)
+        for (int i = 0; i < wallSlots.Length; i++)
         {
-            GameObject currentWallSlot = kWallSlots[i];
+            GameObject currentWallSlot = wallSlots[i];
             for (int j = 0; j < currentWallSlot.transform.childCount; j++)
             {
                 GameObject.Destroy(currentWallSlot.transform.GetChild(j).gameObject);

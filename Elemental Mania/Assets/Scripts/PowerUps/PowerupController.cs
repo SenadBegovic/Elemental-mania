@@ -66,9 +66,9 @@ public class PowerupController : MonoBehaviour {
         }
         else // Otherwise we need to extend its duration(without applying it)
         {
-            ActivePowerup activeSlot = new ActivePowerup();
-            activeSlot.Powerup = powerup;
+            ActivePowerup activeSlot = m_ActivePowerups[powerUpIndex];
             activeSlot.Timeout = m_CurrentTime + powerup.Duration;
+           
             m_ActivePowerups[powerUpIndex] = activeSlot;
         }
     }

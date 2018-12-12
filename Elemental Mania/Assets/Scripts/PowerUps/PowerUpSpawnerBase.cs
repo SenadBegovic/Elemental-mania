@@ -21,6 +21,14 @@ public class PowerUpSpawnerBase : MonoBehaviour
     [SerializeField]
     private float kInitSpawnTime;
 
+    public float GetRespawnFractionTime
+    {
+        get
+        {
+            return TimeToRespawn / kRespawnTime; 
+        }
+    }
+
     private float TimeToRespawn;
 
     protected void Start()
