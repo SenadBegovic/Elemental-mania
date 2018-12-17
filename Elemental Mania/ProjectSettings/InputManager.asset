@@ -123,8 +123,8 @@ InputManager:
     descriptiveNegativeName: 
     negativeButton: j
     positiveButton: l
-    altNegativeButton: '[4]'
-    altPositiveButton: '[6]'
+    altNegativeButton: '[1]'
+    altPositiveButton: '[3]'
     gravity: 2
     dead: 0.001
     sensitivity: 3
