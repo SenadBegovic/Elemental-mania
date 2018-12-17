@@ -912,7 +912,7 @@ GameObject:
   - component: {fileID: 385272753}
   - component: {fileID: 385272751}
   - component: {fileID: 385272752}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Respawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1380,6 +1380,10 @@ Prefab:
         type: 2}
       propertyPath: m_Radius
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1646880981467490, guid: 1f7f9b7cf965cdc4ebb9f7eb590b3e25, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f7f9b7cf965cdc4ebb9f7eb590b3e25, type: 2}
@@ -3094,7 +3098,7 @@ GameObject:
   - component: {fileID: 2019330759}
   - component: {fileID: 2019330761}
   - component: {fileID: 2019330760}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
