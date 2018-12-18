@@ -7742,6 +7742,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114661231321648044, guid: 4dc98884e2ad7a54994bcafdb11ff892,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1171458122}
+    - target: {fileID: 114661231321648044, guid: 4dc98884e2ad7a54994bcafdb11ff892,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dc98884e2ad7a54994bcafdb11ff892, type: 2}
   m_IsPrefabAsset: 0
